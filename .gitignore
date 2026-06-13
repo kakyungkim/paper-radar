@@ -1,0 +1,5 @@
+.DS_Store
+.claude/settings*.json
+
+# vault는 전체 추적(econ-radar 교훈: 클라우드 루틴이 과거를 읽어야 dedup·연속성).
+# 레포는 private로 둘 것.
