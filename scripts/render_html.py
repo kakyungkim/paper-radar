@@ -43,7 +43,7 @@ BADGE_CLASS = {
     "RCT": "badge-rct",
 }
 
-LENS_EMOJI = {"Method": "🔬", "Clinical": "🩺", "Industry": "🏭"}
+LENS_EMOJI = {"Method": "🔬", "Clinical": "🩺", "Industry": "🏭", "Demand": "🎯"}
 
 # ---------------------------------------------------------------------------
 # 유틸: 인라인 마크다운 → HTML
@@ -207,8 +207,8 @@ def _parse_top5(body, j, doc):
             j += 1
             continue
 
-        # 렌즈 줄 (🔬 🩺 🏭)
-        m = re.match(r"^(🔬|🩺|🏭)\s*(Method|Clinical|Industry):\s*(.+)$", s)
+        # 렌즈 줄 (🔬 🩺 🏭 🎯)
+        m = re.match(r"^(🔬|🩺|🏭|🎯)\s*(Method|Clinical|Industry|Demand):\s*(.+)$", s)
         if m:
             card["lenses"].append((m.group(2), m.group(3).strip()))
             j += 1
@@ -354,6 +354,7 @@ CSS = """
     .insight .text { font-size:15px; color:#134e4a; line-height:1.7; }
     .lens-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
     .lens-item { font-size:13.5px; color:#374151; padding:4px 10px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:8px; }
+    .lens-demand { font-size:13.5px; color:#92400e; padding:4px 10px; background:#fef3c7; border:1px solid #fde68a; border-radius:8px; }
     .verify-tag { font-size:12px; color:#6b7280; margin-top:8px; }
 """
 
@@ -437,7 +438,8 @@ def render_top5(doc):
         lens_html = ""
         if card["lenses"]:
             items = " ".join(
-                '<span class="lens-item">%s %s: %s</span>' % (
+                '<span class="%s">%s %s: %s</span>' % (
+                    "lens-demand" if name == "Demand" else "lens-item",
                     LENS_EMOJI.get(name, ""), esc(name), inline(text))
                 for name, text in card["lenses"]
             )
