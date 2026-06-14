@@ -24,6 +24,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/method-YYYY-Www.md`
 - 논문별로: 무엇이 새로운가 / 핵심 가정 / 재현성·검증 / 강점·한계 / 내 연구 적용 메모. 모든 수치에 출처.
 
+## Source grounding 원칙
+`vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 없이 단정하지 않는다.
+
 ## 하지 말아야 할 일
 - 출처 없는 수치·비교를 만들지 않는다. 읽지 않은 방법 세부를 지어내지 않는다("초록 기준"임을 명시).
 - 임상 결론·투자 판단으로 넘어가지 않는다(렌즈 분리).

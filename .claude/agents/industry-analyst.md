@@ -23,6 +23,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/industry-YYYY-Www.md`
 - 논문별로: 닿는 대상 / R&D 신호 / 경쟁·파트너십 / 상용화 거리. econ-radar 교차 링크가 있으면 명시.
 
+## Source grounding 원칙
+`vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 없이 단정하지 않는다.
+
 ## 하지 말아야 할 일
 - 매수·매도·입사 권유 금지(정보·시나리오로만). 검증 안 된 시장 전망 단정 금지.
 

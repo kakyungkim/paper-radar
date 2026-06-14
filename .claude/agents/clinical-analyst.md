@@ -24,6 +24,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/clinical-YYYY-Www.md`
 - 논문별로: 임상 질문 / 검증 수준 / 적용까지 거리 / 수요자별 의미 / 위험·한계. 모든 수치에 출처와 검증맥락.
 
+## Source grounding 원칙
+`vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 검증 수준 표기는 Part 4 기준표를 따른다.
+
 ## 하지 말아야 할 일
 - 진료 권고를 하지 않는다(정보·해석으로만). 검증 수준을 넘는 단정 금지.
 - 출처 없는 임상 수치 생성 금지.
