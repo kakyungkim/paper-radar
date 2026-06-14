@@ -24,6 +24,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/clinical-YYYY-Www.md`
 - 논문별로: 임상 질문 / 검증 수준 / 적용까지 거리 / 수요자별 의미 / 위험·한계. 모든 수치에 출처와 검증맥락.
 
+## 깊이 장치
+`vault/_meta/benchmarks.md`의 "깊이 장치" 표를 참고한다. 임상 논문에 특히 적합한 장치: **수요 렌즈**(환자·처방의·지불자 중 주된 수요자)·**기존 한계→이번 해결**·**검증 수준**. 해당하는 것 1~2개를 분석에 포함한다.
+
 ## Source grounding 원칙
 `vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 검증 수준 표기는 Part 4 기준표를 따른다.
 

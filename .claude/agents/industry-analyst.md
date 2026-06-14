@@ -23,6 +23,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/industry-YYYY-Www.md`
 - 논문별로: 닿는 대상 / R&D 신호 / 경쟁·파트너십 / 상용화 거리. econ-radar 교차 링크가 있으면 명시.
 
+## 깊이 장치
+`vault/_meta/benchmarks.md`의 "깊이 장치" 표를 참고한다. 산업 분석에 특히 적합한 장치: **수요 렌즈**(누가 이 기술을 사고 싶어할까—제약사·투자자·CRO 등)·**역사적 맥락**(왜 이 문제가 오래 풀리지 않았나)·**화제성 신호**(HF Daily 좋아요·Twitter 언급). 해당하는 것 1~2개를 분석에 포함한다.
+
 ## Source grounding 원칙
 `vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 없이 단정하지 않는다.
 

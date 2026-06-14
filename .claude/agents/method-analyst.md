@@ -24,6 +24,9 @@ tools: WebSearch, WebFetch, Read, Write
 - `vault/analysis/method-YYYY-Www.md`
 - 논문별로: 무엇이 새로운가 / 핵심 가정 / 재현성·검증 / 강점·한계 / 내 연구 적용 메모. 모든 수치에 출처.
 
+## 깊이 장치
+`vault/_meta/benchmarks.md`의 "깊이 장치" 표를 참고한다. 방법론 논문에 특히 적합한 장치: **메커니즘 핵심 가정**(이 방법이 작동하는 이유 2~3줄)·**문제의식 선행**(왜 이 질문이 필요했나 1문장)·**기존 한계→이번 해결**. 해당하는 것 1~2개를 분석에 포함한다.
+
 ## Source grounding 원칙
 `vault/_meta/source-grounding.md`를 따른다. 원문 밖 지식·추론을 쓸 때는 `해석:` / `외부 맥락:` / `추정:` / `미제공:` / `질문:` / `검토필요:` prefix 중 하나를 붙인다. 없이 단정하지 않는다.
 

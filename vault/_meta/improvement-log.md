@@ -26,6 +26,16 @@ type: meta
   3. 소속 파싱: Semantic Scholar `/paper` 엔드포인트로 arXiv ID 조회 → `authors[].affiliations` 필드 보강.
   4. 와이드 4편 중 Virtual Biotech(멀티에이전트 AI)와 OmniBioTwin(디지털 트윈)은 반복 등장 가능성 높음 — 신약AI MOC와 임상ML MOC에 포함 후 다음 주 등장 시 핵심 승격 검토.
 
+## 2026-06-15 (benchmarks.md 품질 기준선 도입)
+- **변경 내용**: BRIC 한빛사·사이언스타임즈·Import AI·Asimov Press·The Batch·Owl Posting·HuggingFace Daily Papers 7개 매체 실조사 → `vault/_meta/benchmarks.md` 신규. "바로 반영할 체크리스트" 7항목 + "깊이 장치" 표 + 안티패턴 목록 도출.
+- **하네스 반영**:
+  - `digest-editor`: "품질 기준선" 섹션 추가 — benchmarks.md 체크리스트 7항목 의무 대조, 깊이 장치 2~3개 선택 적용.
+  - `style-critic`: 0순위에 benchmarks.md "하지 말아야 할 것" 추가 — korean-style-samples.md(문체) + benchmarks.md(안티패턴) 이중 체크.
+  - `method-analyst`: 깊이 장치 참조 추가 (메커니즘 핵심 가정·문제의식 선행·기존 한계→해결).
+  - `clinical-analyst`: 깊이 장치 참조 추가 (수요 렌즈·기존 한계→해결·검증 수준).
+  - `industry-analyst`: 깊이 장치 참조 추가 (수요 렌즈·역사적 맥락·화제성 신호).
+- **동기**: 논문 해설 문체가 경제지 문체와 달리 "초록 번역" 함정에 빠지기 쉬움. BRIC 한빛사("문제의식 선행"), Import AI("Why it matters 고정 장치")를 각 에이전트에 맞게 이식.
+
 ## 2026-W24 (설계)
 - 하네스 신규 설계 완료(econ-radar 자매). 첫 실행 전.
 - 확정 방침: 주간 / 핵심축=바이오인포·임상ML·신약개발AI + 🔭와이드(자유선택) / 소스=프리프린트+PubMed·저널 / 3렌즈=방법·임상·산업 / 산출물=HTML+텔레그램+발제+vault.
