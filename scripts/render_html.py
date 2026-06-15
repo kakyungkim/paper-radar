@@ -41,6 +41,7 @@ BADGE_CLASS = {
     "전향": "badge-prosp",
     "외부·다기관": "badge-multi",
     "RCT": "badge-rct",
+    "코드 미공개 — 재현 불가": "badge-nocode",
 }
 
 LENS_EMOJI = {"Method": "🔬", "Clinical": "🩺", "Industry": "🏭", "Demand": "🎯"}
@@ -346,6 +347,7 @@ CSS = """
     .badge-prosp    { background:#d1fae5; color:#065f46; }
     .badge-multi    { background:#dbeafe; color:#1e40af; }
     .badge-rct      { background:#dcfce7; color:#166534; }
+    .badge-nocode   { background:#fee2e2; color:#991b1b; }
     .key-point { border-left:4px solid #4338ca; padding:10px 16px; background:#f5f3ff; border-radius:0 10px 10px 0; margin-top:12px; }
     .key-point .label { font-size:11px; font-weight:700; letter-spacing:0.06em; color:#4338ca; margin-bottom:4px; }
     .key-point .text { font-size:15px; font-weight:500; color:#312e81; line-height:1.7; }
@@ -419,6 +421,8 @@ def render_top5(doc):
             meta_badges = badge_html("preprint")
         elif "peer-reviewed" in card["meta"]:
             meta_badges = badge_html("peer-reviewed")
+        if "코드 미공개" in card["meta"]:
+            meta_badges += " " + badge_html("코드 미공개 — 재현 불가")
 
         meta_html = inline(card["meta"]) if card["meta"] else ""
 

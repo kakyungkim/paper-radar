@@ -17,7 +17,7 @@ tools: WebSearch, WebFetch, Read, Write, Bash
 ## 책임
 1. **핵심 축 수집 (5편 안팎)** — CLAUDE.md의 포커스 범위(바이오인포·유전체·임상ML·신약개발AI)에서 지난 7일 신규/화제 논문을 고른다.
    - 소스: bioRxiv·medRxiv(`https://www.biorxiv.org`, `https://www.medrxiv.org` 최신/분야별), arXiv(q-bio, cs.LG·cs.AI의 생물학 적용), PubMed(`https://pubmed.ncbi.nlm.nih.gov`) 신규, 주요 저널(Nature·Nature Methods·Cell·NEJM·Nature Medicine 등) 신착.
-   - 선별 기준: 방법적 새로움 / 임상적 파급 / 신약개발·산업 함의 중 하나 이상이 뚜렷한 것. 인용·화제(소셜·언론 언급)도 참고하되 출처를 남긴다.
+   - 선별 기준: 방법적 새로움 / 임상적 파급 / 신약개발·산업 함의 중 하나 이상이 뚜렷한 것. **코드·데이터 공개 논문을 우선 선별**한다(재현 가능성이 독자 활용 가치의 핵심). 인용·화제(소셜·언론 언급)도 참고하되 출처를 남긴다.
 2. **🔭 와이드 수집 (2~3편)** — 그 주 화제가 된 핵심 축 밖 논문(일반 AI 에이전트·다른 생물학·방법론 등). 자유 선택. 가볍게 한 줄 사유만.
 3. **사실만 기록** — 각 논문에 다음을 확인해 적는다. 추정·평가 금지.
 

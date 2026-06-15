@@ -3,6 +3,35 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-06-16 벤치마킹 후 개선 TODO
+
+### ✅ 즉시 적용 (2026-06-16 완료)
+- **선택 이유 1줄** (preLights) — 각 논문 카드에 "선택 이유" 필드 추가. digest-editor·NEWSLETTER-FORMAT 반영.
+- **코드 공개 배지** (Papers with Code) — paper-scout 선별 기준 1순위에 코드 공개 논문 우선 추가. 미공개 시 `코드 미공개 — 재현 불가` 배지(빨강). render_html.py `.badge-nocode` 추가.
+- **저자·기관 전 항목 명시** — digest-editor·NEWSLETTER-FORMAT에 `저자: 1저자, 교신저자 | 소속 기관` 필수 줄 추가.
+
+### 📋 TODO (미적용 — 검토 후 단계적 도입)
+
+**TODO-A: 와이드 + 딥다이브 발행 분리** (TheSequence 벤치마크)
+- 현재: 매주 5편 와이드 단일 구조
+- 목표: 주간 5편 짧게(250단어) + 격주 1편 집중(800~1,200단어) 두 레이어
+- 딥다이브는 텔레그램 별도 포스트로 공지
+- 작업 범위: CCR 프롬프트 수정 + NEWSLETTER-FORMAT 딥다이브 섹션 분리 발행 로직
+
+**TODO-B: 사회적 신호 병기** (AlphaSignal 벤치마크)
+- 각 항목에 "HuggingFace Daily Papers #N" 또는 "X 언급 XXX건" 1줄 추가
+- paper-scout 소스에 AlphaSignal·HF Daily Papers 추가
+- 작업 범위: paper-scout.md 소스 목록 + 논문 카드 양식
+
+**TODO-C: preprint → 출판 후 변경 추적** (preLights postLights 벤치마크)
+- 선정 논문이 동료심사 통과 후 수치·주장이 달라지면 텔레그램 단독 포스트 발행
+- 작업 범위: recent-papers.jsonl에 `status` 필드 추가(preprint/published) + 주간 루틴에 상태 체크 단계 추가
+
+**TODO-D: 독자 Q&A 루프** (preLights 저자 응답 벤치마크)
+- 텔레그램 포스트 말미에 "리플라이로 질문" 유도 문구 추가
+- 월 1회 "독자 질문 답변" 이슈 별도 발행
+- 작업 범위: send_push.py 템플릿 + CCR 월간 루틴 신설 여부 검토
+
 하네스를 실제로 돌린 뒤 빠진 소스, 약했던 렌즈, 고칠 점, 와이드 승격 후보를 여기에 남긴다. 다음 개선의 근거다.
 
 ## 양식
