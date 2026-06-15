@@ -1,10 +1,10 @@
 name: Telegram Weekly Push
 
-# vault/push/YYYY-Www.md 파일이 추가·변경될 때 자동 실행
+# vault/push/YYYY-Www.md 또는 YYYY-Www-deepdive.md 변경 시 자동 실행
 # 수동 실행: Actions 탭 → Run workflow → week 입력 (YYYY-Www)
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'vault/push/*.md'
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2   # HEAD~1 비교에 필요
+          fetch-depth: 2
 
       - name: Detect week
         id: detect
@@ -39,10 +39,23 @@ jobs:
           echo "week=$WEEK" >> "$GITHUB_OUTPUT"
           echo "Detected week: $WEEK"
 
-      - name: Send Telegram push
+      - name: Send main push
         if: steps.detect.outputs.week != ''
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID_PAPERRADAR }}
         run: |
           python3 scripts/send_push.py ${{ steps.detect.outputs.week }}
+
+      - name: Send Deep Dive push
+        if: steps.detect.outputs.week != ''
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID_PAPERRADAR }}
+        run: |
+          DD_FILE="vault/push/${{ steps.detect.outputs.week }}-deepdive.md"
+          if [ -f "$DD_FILE" ]; then
+            python3 scripts/send_push.py ${{ steps.detect.outputs.week }}-deepdive
+          else
+            echo "Deep Dive 파일 없음 — 건너뜀"
+          fi

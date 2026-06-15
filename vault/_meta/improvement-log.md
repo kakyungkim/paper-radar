@@ -10,7 +10,13 @@ type: meta
 - **코드 공개 배지** (Papers with Code) — paper-scout 선별 기준 1순위에 코드 공개 논문 우선 추가. 미공개 시 `코드 미공개 — 재현 불가` 배지(빨강). render_html.py `.badge-nocode` 추가.
 - **저자·기관 전 항목 명시** — digest-editor·NEWSLETTER-FORMAT에 `저자: 1저자, 교신저자 | 소속 기관` 필수 줄 추가.
 
-### 📋 TODO (미적용 — 검토 후 단계적 도입)
+### ✅ 2026-06-16 추가 적용 (TODO → 완료)
+- **TODO-A 딥다이브 분리**: render_html.py에 `build_deepdive_push()` 추가 → `vault/push/YYYY-Www-deepdive.md` 생성. GitHub Actions에서 deepdive 파일 감지 후 별도 Telegram 메시지 발송.
+- **TODO-B 사회적 신호**: paper-scout 소스에 HF Daily Papers 추가. raw 양식·NEWSLETTER-FORMAT에 `사회적 신호:` 필드 추가.
+- **TODO-C preprint 추적**: knowledge-curator에 preprint→published 상태 추적 단계 추가. recent-papers.jsonl 스키마에 `status` 필드 추가.
+- **TODO-D Q&A**: push 메시지 말미에 "💬 궁금한 점은 리플라이로 — 매월 Q&A 정리합니다." 추가.
+
+### 📋 향후 검토 항목
 
 **TODO-A: 와이드 + 딥다이브 발행 분리** (TheSequence 벤치마크)
 - 현재: 매주 5편 와이드 단일 구조

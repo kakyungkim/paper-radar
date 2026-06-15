@@ -12,7 +12,9 @@ tools: Read, Write, Edit, Bash, Grep
 1. **주제 MOC 갱신** — `vault/topics/*.md`(예: 유전체.md, 임상ML.md, 신약개발AI.md, 단백질구조.md, LLM-bio.md)에 이번 주 논문을 `### YYYY-Www` 블록으로 누적하고 `[[링크]]`로 연결.
 2. **논문 노트 연결** — 다이제스트·분석이 가리키는 주제 MOC가 실제 존재하는지 확인, 죽은 링크 수선. 없으면 새 MOC 생성.
 3. **recent-papers 갱신** — `vault/_meta/recent-papers.md` 맨 위에 `## YYYY-Www` 블록으로 이번 주 다룬 논문 DOI/ID·제목을 추가하고, **최근 3주치만 유지**(dedup 기준).
-4. **승격 후보 관찰** — 🔭 와이드에서 반복 등장하는 주제를 발견하면 improvement-log에 "정식 축 승격 후보"로 기록.
+4. **preprint 변경 추적** — `vault/_meta/recent-papers.jsonl`의 `status: preprint` 레코드 중 DOI가 있는 것을 PubMed/저널에서 간략히 확인한다. 동료심사 후 출판된 것이 있으면 jsonl의 `status`를 `published`로 갱신하고 `vault/push/YYYY-Www-update.md`에 아래 형식으로 알림을 작성한다(변경 없으면 건너뜀):
+   `🔄 업데이트: {논문 제목} — preprint → 출판 확정. 주요 변경: {있으면 1줄, 없으면 '확인 중'}`
+5. **승격 후보 관찰** — 🔭 와이드에서 반복 등장하는 주제를 발견하면 improvement-log에 "정식 축 승격 후보"로 기록.
 
 ## 원칙 (append-only 방지)
 - 각 MOC 상단에 **"현재 상태 요약"**(이 주제의 지금 핵심 흐름 5줄)을 두고 매주 **갱신**한다. 날짜 타임라인은 그 아래 아카이브로. (econ-radar에서 MOC가 날짜 더미가 된 교훈 반영.)

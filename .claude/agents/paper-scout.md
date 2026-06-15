@@ -11,12 +11,13 @@ tools: WebSearch, WebFetch, Read, Write, Bash
 ## 0순위 — 중복 회피
 **시작 전 `vault/_meta/recent-papers.jsonl`를 읽어라.** 각 줄의 JSON 레코드에서 `doi`·`arxiv_id` 필드를 추출하고, 이미 다룬 논문은 다시 올리지 않는다. 같은 연구의 후속(버전 업데이트·저널 게재 전환)만 '후속'으로 짧게. 최근 `vault/digest/` 2~3주치도 제목·저자 단위로 대조한다.
 
-> JSONL 형식: `{"doi":"10.1101/…","arxiv_id":"2406.xxxxx","record_id":"kim-2026-…","title":"…","week":"2026-W25","date_added":"2026-06-20","tags":["임상ML"]}`
+> JSONL 형식: `{"doi":"10.1101/…","arxiv_id":"2406.xxxxx","record_id":"kim-2026-…","title":"…","week":"2026-W25","date_added":"2026-06-20","tags":["임상ML"],"status":"preprint"}`
+> `status` 값: `preprint`(초기) / `published`(동료심사 후 출판 확인 — knowledge-curator가 갱신)
 > 첫 줄은 `#`으로 시작하는 주석이므로 건너뛴다.
 
 ## 책임
 1. **핵심 축 수집 (5편 안팎)** — CLAUDE.md의 포커스 범위(바이오인포·유전체·임상ML·신약개발AI)에서 지난 7일 신규/화제 논문을 고른다.
-   - 소스: bioRxiv·medRxiv(`https://www.biorxiv.org`, `https://www.medrxiv.org` 최신/분야별), arXiv(q-bio, cs.LG·cs.AI의 생물학 적용), PubMed(`https://pubmed.ncbi.nlm.nih.gov`) 신규, 주요 저널(Nature·Nature Methods·Cell·NEJM·Nature Medicine 등) 신착.
+   - 소스: bioRxiv·medRxiv(`https://www.biorxiv.org`, `https://www.medrxiv.org` 최신/분야별), arXiv(q-bio, cs.LG·cs.AI의 생물학 적용), PubMed(`https://pubmed.ncbi.nlm.nih.gov`) 신규, 주요 저널(Nature·Nature Methods·Cell·NEJM·Nature Medicine 등) 신착, **HuggingFace Daily Papers**(`https://huggingface.co/papers` — 생물학·신약 관련 상위 논문).
    - 선별 기준: 방법적 새로움 / 임상적 파급 / 신약개발·산업 함의 중 하나 이상이 뚜렷한 것. **코드·데이터 공개 논문을 우선 선별**한다(재현 가능성이 독자 활용 가치의 핵심). 인용·화제(소셜·언론 언급)도 참고하되 출처를 남긴다.
 2. **🔭 와이드 수집 (2~3편)** — 그 주 화제가 된 핵심 축 밖 논문(일반 AI 에이전트·다른 생물학·방법론 등). 자유 선택. 가볍게 한 줄 사유만.
 3. **사실만 기록** — 각 논문에 다음을 확인해 적는다. 추정·평가 금지.
@@ -31,6 +32,7 @@ tools: WebSearch, WebFetch, Read, Write, Bash
 - 한 줄 요지: {논문이 주장하는 것 — 사실 그대로, 평가 없이}
 - 핵심 수치: {주요 성능·표본수 등 — 초록 기준, 출처 명시}
 - 분야 태그: {유전체 / 임상ML / 신약AI / 단백질 / LLM-bio / 기타}
+- 사회적 신호: {HF Daily Papers 순위 / X 언급 건수 / 언론 보도 — 없으면 "없음"}
 - 선별 사유: {왜 골랐나 한 줄}
 ```
 

@@ -614,6 +614,26 @@ def build_push(doc):
         doi_links = [m for m in links if "doi.org" in m.group(2) or "arxiv.org" in m.group(2)]
         if doi_links:
             lines.append("🔗 핵심 원문: %s" % doi_links[0].group(2))
+    lines.append("")
+    lines.append("💬 궁금한 점은 리플라이로 — 매월 Q&A 정리합니다.")
+    return "\n".join(lines) + "\n"
+
+
+def build_deepdive_push(doc):
+    """Deep Dive 섹션을 별도 텔레그램 메시지로 — vault/push/YYYY-Www-deepdive.md 생성."""
+    period = doc["period"] or ""
+    if not doc["deepdive"]:
+        return None
+    lines = ["🔬 paper-radar Deep Dive — %s" % period, ""]
+    for title, paras in doc["deepdive"][:2]:
+        if title:
+            lines.append("▸ %s" % title)
+        for p in paras[:3]:
+            text = re.sub(r"\*\*|__", "", p)
+            text = LINK_RE.sub(r"\1", text)
+            lines.append(text[:220])
+        lines.append("")
+    lines.append("🔗 전체 보기: https://kakyungkim.github.io/paper-radar/%s.html" % period)
     return "\n".join(lines) + "\n"
 
 
@@ -653,21 +673,28 @@ def main():
 
     html = build_html(doc)
     push = build_push(doc)
+    deepdive_push = build_deepdive_push(doc)
 
     suffix = args.out_suffix
     os.makedirs(HTML_DIR, exist_ok=True)
     os.makedirs(PUSH_DIR, exist_ok=True)
     html_path = os.path.join(HTML_DIR, args.period + suffix + ".html")
     push_path = os.path.join(PUSH_DIR, args.period + suffix + ".md")
+    deepdive_path = os.path.join(PUSH_DIR, args.period + suffix + "-deepdive.md")
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     with open(push_path, "w", encoding="utf-8") as f:
         f.write(push)
+    if deepdive_push:
+        with open(deepdive_path, "w", encoding="utf-8") as f:
+            f.write(deepdive_push)
 
     sys.stderr.write("[render_html] 완료\n")
     sys.stderr.write("  HTML: %s (%d bytes)\n" % (html_path, len(html.encode("utf-8"))))
     sys.stderr.write("  PUSH: %s\n" % push_path)
+    if deepdive_push:
+        sys.stderr.write("  DEEP DIVE PUSH: %s\n" % deepdive_path)
     sys.stderr.write("  섹션: top5=%d, deepdive=%d, wide=%d, threads=%d, sources=%d\n" % (
         len(doc["top5"]), len(doc["deepdive"]), len(doc["wide"]),
         len(doc["threads"]), len(doc["sources"])))
