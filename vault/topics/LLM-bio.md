@@ -5,9 +5,13 @@ tags: [LLM-bio]
 # 🗂 LLM-bio — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W25 기준) LLM의 임상 배포 한계와 자율 생물학 에이전트의 부상이 동시에 가시화됐다. Basu(UCSF) 연구는 EHR 다단계 추론에서 모든 주요 LLM이 hop 수에 비례해 정확도가 떨어짐을 정량화해 임상 AI 안전성 평가의 새 축을 제시한다. 반면 CellVoyager(Nature Methods)는 LLM 기반 에이전트가 scRNA-seq를 자율 탐색해 전문가 평가 기준 창의적·과학적으로 타당한 신규 발견을 생성한다는 것을 동료심사로 입증했다. 테이블 파운데이션 모델(TabPFN·TabDPT 계열)과 그래프 트랜스포머(scGTN)는 임상 생존 분석·세포 클러스터링에 FM을 경량 이식하는 패턴을 보여준다. W24의 모달리티 분화 트렌드에서 W25는 "실용 배포와 실패 감지"로 무게중심이 이동했다. 코드 공개율 악화(W24 3/5 미공개 → W25 핵심 5편 전편 미공개)는 재현성 관점에서 경고 신호다.
+(2026-W26 기준) 범용 LLM이 임상 벤치마크에서 특화 AI를 능가한다는 동료심사 결과가 나오면서(Vishwanath 외, Nature Medicine), "특화 모델 = 우월"이라는 통념이 흔들리기 시작했다. 동시에 Molexar처럼 분자 그래프·SMILES·3D 구조를 하나의 파운데이션 모델로 통합하는 multimodal unification 흐름이 신약 설계 영역에서 강해지고 있다. W25의 에이전트 자율 생물학 분석(CellVoyager)과 임상 LLM 실패 실증(Basu)에 이어, W26에서는 "범용 vs 특화" 구도와 "멀티모달 통합 설계"가 핵심 쟁점이다. 코드 공개율은 W26에서 2/5(Stable-Shift, NYU LLM 비교)로 소폭 회복됐다. Robin(자율 과학 발견, Nature) 와이드 논문이 반복 등장할 경우 핵심 축 승격 대상이다.
 
 ## 타임라인
+### 2026-W26
+- **범용 LLM vs 임상 특화 AI(Vishwanath 외, NYU)** — 범용 LLM이 의료 벤치마크에서 임상 특화 도구를 전반적으로 능가. Nature Medicine 동료심사 게재. 코드 공개. 출처: [[digest/2026-W26]] | DOI:10.1038/s41591-026-04431-5
+- **Molexar: 멀티모달 분자 파운데이션 모델(Lin 외)** — 분자 그래프·SMILES·3D 구조 통합 unified 아키텍처. 신약 설계 전 단계 지원. 미동료심사(preprint). 출처: [[digest/2026-W26]] | arXiv:2606.25865
+
 ### 2026-W25
 - **EHR 추론 실패 실증(Basu, UCSF)** — hop=1~4 단계에서 Claude Sonnet·GPT-4o·GPT-5 모두 단조 정확도 감소. 임상 LLM 안전성 평가 지표 제시. 코드 미공개. 출처: [[digest/2026-W25]] | arXiv:2606.16890
 - **Tabular FM 생존 분석 적응(Pham 외)** — TabDPT-FT-MTLR, MIMIC-IV C-지수 0.856. AIiH 2026 게재 확정. 코드 미공개. 출처: [[digest/2026-W25]] | arXiv:2606.12006

@@ -3,6 +3,15 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W26 (2026-06-28)
+- 수집: 핵심 5편(임상ML×2, 신약AI×2, 유전체×2 중복 포함), 와이드 3편
+- 분석: method/clinical/industry 3렌즈 완료
+- 검수: style-critic 22건 수정, claim-checker 수정 1건(Robin 서브에이전트 역할 오기)
+- 확인 불가: arXiv 직접 접근 차단으로 p=1.91×10⁻⁴² 수치 PDF 본문 직접 확인 불가
+- 코드 공개율: 5편 중 2편(Stable-Shift, NYU LLM 비교) — W25 0/5 대비 회복
+- 와이드 승격 후보: Robin(자율 과학 발견, Nature) — 신약AI 핵심 축 편입 검토
+- 다음 주 주시: DeepBD 코드 공개 여부, 문헌마이닝 leakage 통제 후 OR 재추정 논문
+
 ## 2026-W25
 
 - **빠진 소스·약했던 렌즈**
