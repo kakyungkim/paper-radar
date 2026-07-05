@@ -3,6 +3,17 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W27 (2026-07-05)
+
+**실행 메모**
+- 수집: 핵심 5편 + 와이드 2편. arXiv 2607.xxxxx 범위 July 1-2 집중. 소셜 신호 없음(HF Daily Papers 403).
+- 주목 논문: Affinage (MIT) — 코드·API 공개로 즉시 활용 가능한 유일한 논문.
+- 재현성 병목: 5편 중 코드 공개 확인 1편(Affinage). CNS 분류·Active-GRPO 코드 미공개.
+- 임상 근접도: CNS 종양 분류(후향 N=1,104 독립 코호트)가 유일한 후향 검증 논문. 나머지 in silico.
+- 와이드: DiscoPER(자율과학), CAL(단백질 유연성). AI 에이전트 자율과학 흐름이 2주 연속 와이드 등장(W26 Robin → W27 DiscoPER). 승격 검토 후보.
+- claim-checker: 수정 2건 (CNS 역산 기준값 82%/88% prefix 처리, Affinage GitHub 404 플래그).
+- 와이드 승격 후보: 자율과학 AI 에이전트 (W26 Robin, W27 DiscoPER 2주 연속) — 다음 주 재출현 시 핵심 축 검토.
+
 ## 2026-W26 (2026-06-28)
 - 수집: 핵심 5편(임상ML×2, 신약AI×2, 유전체×2 중복 포함), 와이드 3편
 - 분석: method/clinical/industry 3렌즈 완료

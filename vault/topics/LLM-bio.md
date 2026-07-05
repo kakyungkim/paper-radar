@@ -5,9 +5,13 @@ tags: [LLM-bio]
 # 🗂 LLM-bio — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W26 기준) 범용 LLM이 임상 벤치마크에서 특화 AI를 능가한다는 동료심사 결과가 나오면서(Vishwanath 외, Nature Medicine), "특화 모델 = 우월"이라는 통념이 흔들리기 시작했다. 동시에 Molexar처럼 분자 그래프·SMILES·3D 구조를 하나의 파운데이션 모델로 통합하는 multimodal unification 흐름이 신약 설계 영역에서 강해지고 있다. W25의 에이전트 자율 생물학 분석(CellVoyager)과 임상 LLM 실패 실증(Basu)에 이어, W26에서는 "범용 vs 특화" 구도와 "멀티모달 통합 설계"가 핵심 쟁점이다. 코드 공개율은 W26에서 2/5(Stable-Shift, NYU LLM 비교)로 소폭 회복됐다. Robin(자율 과학 발견, Nature) 와이드 논문이 반복 등장할 경우 핵심 축 승격 대상이다.
+(2026-W27 기준) Affinage(MIT)가 PubMed 문헌 전체에서 기계적 유전자 기능 주석을 추출하는 LLM 파이프라인을 코드·API 공개와 함께 발표했다. 바이오 도메인 LLM의 실용 배포 수준을 한 단계 높인 사례로, W25 CellVoyager(자율 분석)·W26 BioHarness(증거 조립)에 이은 생물학 에이전트 LLM 흐름이 지속된다. Active-GRPO는 GRPO 강화학습을 분자 최적화 LLM에 이식해 자기 개선 추론 패턴을 신약 설계에 연결했다. 자율과학 AI(DiscoPER, W27 와이드)가 W26 Robin에 이어 2주 연속 등장했다. 코드 공개는 W27에서 Affinage 1편으로, 재현성 기준은 여전히 약하다.
 
 ## 타임라인
+### 2026-W27
+- **Affinage: LLM 기반 전장 유전체 기계적 유전자 주석(Di Bernardo 외, MIT)** — PubMed 문헌 전체에서 LLM으로 기계적 유전자 기능 주석 자동화. 게놈 스케일 문헌 마이닝. 코드·API 공개. 미동료심사(preprint). 출처: [[digest/2026-W27]] | arXiv:2607.02217
+- **Active-GRPO: GRPO 기반 분자 최적화 LLM(Liu 외)** — GRPO 강화학습으로 LLM 자기 개선 추론을 분자 최적화에 적용. 코드 미공개. 미동료심사(preprint). 출처: [[digest/2026-W27]] | arXiv:2607.00531
+
 ### 2026-W26
 - **범용 LLM vs 임상 특화 AI(Vishwanath 외, NYU)** — 범용 LLM이 의료 벤치마크에서 임상 특화 도구를 전반적으로 능가. Nature Medicine 동료심사 게재. 코드 공개. 출처: [[digest/2026-W26]] | DOI:10.1038/s41591-026-04431-5
 - **Molexar: 멀티모달 분자 파운데이션 모델(Lin 외)** — 분자 그래프·SMILES·3D 구조 통합 unified 아키텍처. 신약 설계 전 단계 지원. 미동료심사(preprint). 출처: [[digest/2026-W26]] | arXiv:2606.25865
