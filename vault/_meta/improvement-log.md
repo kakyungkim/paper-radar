@@ -3,6 +3,13 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W28 (2026-07-12)
+- 파이프라인 정상 실행: scout→method∥clinical∥industry→digest→style-critic→claim-checker→render→curator
+- style-critic 10건 수정 (AI 상투구·번역투 제거)
+- claim-checker 2건 수정 (검토필요: prefix 추가, 추정: prefix 재배치)
+- digest-renderer: HTML 32KB, 푸시 968B 생성. Sources 섹션 파싱=0 (형식 불일치 — 개선 필요)
+- 개선 과제: Sources 섹션을 파이프 테이블 형식으로 NEWSLETTER-FORMAT.md 계약 명시 필요
+
 ## 2026-W27 (2026-07-05)
 
 **실행 메모**

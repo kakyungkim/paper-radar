@@ -5,6 +5,24 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
+## 2026-W28
+| record_id | 제목 | DOI / arXiv ID | 상태 |
+|---|---|---|---|
+| ismail-2026-W28 | Mapping the path to clinical implementation of multi-omics | DOI:10.1038/s41588-026-02663-2 | peer-reviewed |
+| andrews-2026-W28 | Isoform-level resolution in single-cell CRISPR screens reveals hidden functional consequences of gene perturbation | DOI:10.64898/2026.07.09.737410 | preprint |
+| rizdvanetskyi-2026-W28 | Data-Driven Soft Labeling Scales DNA Read Classification to Whole-Body Cell-Type Deconvolution | arXiv:2607.04987 | preprint |
+| asiedu-2026-W28 | Causal ASCEND: Scalable Two-tier Causal Discovery on High Dimensional Multi-omics Data | arXiv:2607.04527 | preprint |
+| bang-2026-W28 | Predicting Therapeutic Outcome via Aligning Patient-Specific Knowledge Graph and Gene-Level Perturbation Representations | arXiv:2607.04557 | preprint |
+
+## 2026-W27
+| record_id | 제목 | DOI / arXiv ID | 상태 |
+|---|---|---|---|
+| dibernardo-2026-W27 | Affinage: genome-scale mechanistic gene annotation from the published literature | arXiv:2607.02217 | preprint |
+| ferreira-2026-W27 | A Novel Machine Learning Approach for Central Nervous System Tumor Classification from DNA Methylation | arXiv:2607.01307 | preprint |
+| liu-2026-W27 | Active-GRPO: Adaptive Imitation and Self-Improving Reasoning for Molecular Optimization | arXiv:2607.00531 | preprint |
+| zhang-2026-W27 | Structured Gaussian Processes for Uncertainty-Aware Classification of High-Dimensional, Small-Sampled Omics Data | arXiv:2607.02103 | preprint |
+| bhattacharya-2026-W27 | An Additive MLP-GNN Framework for Characterizing Chemical and Structural Contributions to Aqueous Solubility | arXiv:2607.02212 | preprint |
+
 ## 2026-W26
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
@@ -13,23 +31,3 @@ paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 �
 | li-2026-W26 | DeepBD: A Grounded Agentic Workflow for Variant Prioritization and Diagnosis of Genetic Birth Defects | arXiv:2606.24779 | preprint |
 | dip-2026-W26 | Stable-Shift: Biologically Structured Prediction of Transcriptional Responses to Unseen Gene Perturbations | arXiv:2606.24940 | preprint |
 | lin-2026-W26 | Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design | arXiv:2606.25865 | preprint |
-
-## 2026-W25
-| record_id | 제목 | DOI / arXiv ID | 상태 |
-|---|---|---|---|
-| wu-2026-W25 | scGTN: Deep Siamese Graph Transformer Network for Single-cell RNA Sequencing Clustering | arXiv:2606.18672 | preprint |
-| hu-2026-W25 | Probing, Fusion, and Trustworthiness: A Systematic Evaluation of Foundation Model Representations for Multimodal Cancer Analysis | arXiv:2606.17115 | preprint |
-| wang-2026-W25 | Towards Fair Predictions: Group Conditional Concordance Index to Quantify Fairness in Time-to-Event Prognostication | arXiv:2606.16872 | preprint |
-| basu-2026-W25 | Compositional Reasoning Depth Predicts Clinical AI Failure | arXiv:2606.16890 | preprint |
-| pham-2026-W25 | Tabular Foundation Models for Clinical Survival Analysis via Survival-Aware Adaptation | arXiv:2606.12006 | peer-reviewed |
-| alber-2026-W25 | CellVoyager: AI CompBio Agent Generates New Insights by Autonomously Analyzing Biological Data | DOI:10.1038/s41592-026-03029-6 | published |
-| xiao-2026-W25 | BioHarness: Substrate-Aware Evidence Assembly for Biomedical Question Answering | arXiv:2606.19396 | preprint |
-
-## 2026-W24
-| record_id | 제목 | DOI / arXiv ID | 상태 |
-|---|---|---|---|
-| zhang-2026-W24 | m6A-FORM: A Foundation Model for Decoding N6-methyladenosine Biology | arXiv:2606.12219 | preprint |
-| jiang-2026-W24 | OCOO-T: A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction | arXiv:2606.12838 | preprint |
-| thakur-2026-W24 | Seeing Below the Limit of Detection: A Censored-Poisson Bayesian Latent-Growth Change-Point Detector for Serial ctDNA | arXiv:2606.11876 | preprint |
-| nguyen-2026-W24 | GLACIER: A Multimodal Student-Teacher Foundation Model for Molecular Property Prediction | arXiv:2606.11382 | preprint |
-| xue-2026-W24 | Probabilistic Contrastive Pretraining for Multi-task ADME Property Prediction | arXiv:2606.11508 | preprint |
