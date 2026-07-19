@@ -3,6 +3,15 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W29 (2026-07-19)
+- 핵심 5편: scVision(단일세포 ViT), Corgi/Corgi+(서열-기능, peer-reviewed), LATTICE(공간 멀티오믹스), Evo 2 Probes(AMR), 방사선 반응 인과 발견
+- 와이드: Inkling(975B MoE 오픈웨이트), SEED(에이전트 RL)
+- 코드 공개: Corgi(핵심), SEED(와이드) — 핵심 5편 중 1건만 공개
+- 렌더 수정(25건): Key Point/Insight/렌즈 줄 포맷 파서 불일치 수정
+- 구조 이슈: Sources 섹션 파싱 미구현(W24~W28 동일), DOI/링크 파서 불일치 → render_html.py 파서 개선 필요
+- 와이드 승격 후보: 없음(이번 주 와이드 모두 일반 AI — 생물학 특화 없음)
+- 다음 주 주의: 핵심 5편 코드 공개율 낮음 — scVision/LATTICE 후속 공개 모니터링 권장
+
 ## 2026-W28 (2026-07-12)
 - 파이프라인 정상 실행: scout→method∥clinical∥industry→digest→style-critic→claim-checker→render→curator
 - style-critic 10건 수정 (AI 상투구·번역투 제거)

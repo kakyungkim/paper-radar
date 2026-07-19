@@ -5,6 +5,15 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
+## 2026-W29
+| record_id | 제목 | DOI / arXiv ID | 상태 |
+|---|---|---|---|
+| yesiloglu-2026-W29 | A vision foundation model for single-cell biology via spatial gene cartography | arXiv:2607.14163 | preprint |
+| aksu-2026-W29 | Context-aware sequence-to-function model of human gene regulation | DOI:10.1038/s41467-026-75527-2 | peer-reviewed |
+| dwarampudi-2026-W29 | LATTICE: Graph Self-Supervised Learning for Multimodal Spatial Omics Integration | arXiv:2607.14410 | preprint |
+| guntoro-2026-W29 | Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes | arXiv:2607.14070 | preprint |
+| shah-2026-W29 | Causal Discovery of Radiation Response Mechanisms in Human Cells | arXiv:2607.13994 | preprint |
+
 ## 2026-W28
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
@@ -23,11 +32,3 @@ paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 �
 | zhang-2026-W27 | Structured Gaussian Processes for Uncertainty-Aware Classification of High-Dimensional, Small-Sampled Omics Data | arXiv:2607.02103 | preprint |
 | bhattacharya-2026-W27 | An Additive MLP-GNN Framework for Characterizing Chemical and Structural Contributions to Aqueous Solubility | arXiv:2607.02212 | preprint |
 
-## 2026-W26
-| record_id | 제목 | DOI / arXiv ID | 상태 |
-|---|---|---|---|
-| vishwanath-2026-W26 | General-purpose large language models outperform specialized clinical AI tools on medical benchmarks | DOI:10.1038/s41591-026-04431-5 | peer-reviewed |
-| paterson-2026-W26 | Human genetic evidence is associated with drug approval across therapeutic areas | arXiv:2606.14823 | preprint |
-| li-2026-W26 | DeepBD: A Grounded Agentic Workflow for Variant Prioritization and Diagnosis of Genetic Birth Defects | arXiv:2606.24779 | preprint |
-| dip-2026-W26 | Stable-Shift: Biologically Structured Prediction of Transcriptional Responses to Unseen Gene Perturbations | arXiv:2606.24940 | preprint |
-| lin-2026-W26 | Molexar: A Unified Multimodal Molecular Foundation Model for Drug Design | arXiv:2606.25865 | preprint |

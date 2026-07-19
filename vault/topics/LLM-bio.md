@@ -5,9 +5,13 @@ tags: [LLM-bio]
 # 🗂 LLM-bio — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W28 기준) MolBasic(arXiv:2607.03007, 와이드)이 SMILES-그래프 상호 번역 학습으로 분자 LLM의 구조 이해를 강화하는 방법을 제시했다. 분자 파운데이션 모델에서 화학 표현(chemical representation)의 다중 뷰 정렬 문제를 다루는 흐름이 W26 Molexar 이후 이어지고 있다. PREDIKTOR의 CLIP 기반 환자 지식 그래프-교란 정렬은 대조 학습(contrastive learning) 패러다임이 신약AI 예측으로 확장된 사례다. W25 CellVoyager(자율 분석)·W26 BioHarness(증거 조립)·W27 Affinage(문헌 주석)로 이어지던 생물학 에이전트 LLM 흐름은 W28에서 소강 상태다. 자율과학 AI 에이전트(W26 Robin, W27 DiscoPER 2주 연속)도 W28 미등장으로 승격 관찰이 유보된다.
+(2026-W29 기준) scVision(yesiloglu, arXiv:2607.14163)은 ViT 아키텍처를 단일세포 생물학에 이식해 공간 유전자 지도(spatial gene cartography)로 72M 세포를 사전학습한 비전 파운데이션 모델이다. 언어 모델이 아닌 비전 트랜스포머를 세포 생물학에 적용한 흐름이 W24 m6A-FORM·W25 scGTN 이후 뚜렷해지고 있다. Evo 2 Probes(guntoro, arXiv:2607.14070)는 게놈 언어 모델 Evo 2를 프로브로 활용해 메타게노믹스에서 바이오시큐리티 기능(AMR 유전자 등)을 스크리닝한다. W27 Affinage의 문헌 마이닝 LLM에 이어, W29에서는 비전 파운데이션 모델과 게놈 언어 모델 프로브로 적용 방향이 분화한다. 생물학 에이전트 LLM 흐름(W25~W27)은 W28~W29에서 소강 상태다.
 
 ## 타임라인
+### 2026-W29 (2026-07-14~19)
+- [[scVision]] (arXiv:2607.14163) — 단일세포 생물학 비전 파운데이션 모델, ViT로 72M 세포 사전학습, 공간 유전자 지도 활용 [preprint]
+- [[Evo2-Probes]] (arXiv:2607.14070) — Evo 2 게놈 언어 모델 프로브, 메타게노믹스 AMR·바이오시큐리티 기능 스크리닝 [preprint]
+
 ### 2026-W28
 - **2026-W28** — MolBasic (arXiv:2607.03007): SMILES-그래프 번역으로 분자 LLM 구조 이해 개선 (와이드) [[2026-W28]]
 
