@@ -3,6 +3,15 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W30 (2026-07-26)
+- 실행: 전체 파이프라인 정상 완료 (scout→분석3→편집→문체→사실검증→렌더→curator)
+- 수집: 핵심 5편 (바이오인포 2, 신약AI 2, 임상ML 1) + 와이드 2편
+- 이번 주 흐름: 불확실성 정량화(UQ)의 실용화 — RELIABLE-BA(신약AI)·베이즈 UQ(임상AI) 두 편이 독립적으로 같은 방향을 가리킴
+- 이슈: claim-checker가 RELIABLE-BA 코드 공개 오류(미공개→공개) 수정 (심각 수준)
+- 이슈: render 시 digest md 6가지 형식 불일치 수정 (parser 계약 업데이트 필요)
+- 와이드 승격 후보: 사이클릭 펩타이드 앙상블 ML (W2) — 핵심 축 신약AI와 경계선
+- 빠진 소스: GatorPrism 세부 수치 직접 확인 불가 (bioRxiv 접근 제한)
+
 ## 2026-W29 (2026-07-19)
 - 핵심 5편: scVision(단일세포 ViT), Corgi/Corgi+(서열-기능, peer-reviewed), LATTICE(공간 멀티오믹스), Evo 2 Probes(AMR), 방사선 반응 인과 발견
 - 와이드: Inkling(975B MoE 오픈웨이트), SEED(에이전트 RL)

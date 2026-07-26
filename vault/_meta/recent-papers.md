@@ -5,6 +5,15 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
+## 2026-W30
+| record_id | 제목 | DOI / arXiv ID | 상태 |
+|---|---|---|---|
+| harmonization-2026-W30 | Harmonization Benchmark for Foundation Models Across Single-Cell and Spatial Transcriptomics | arXiv:2607.17227 | preprint |
+| reliable-2026-W30 | RELIABLE-BA: Reliability-Aware Multi-Engine Binding Affinity Prediction | arXiv:2607.17601 | preprint |
+| llm-2026-W30 | LLM versus Structure-Based Drug Design: A Spatial Constraint Benchmark | arXiv:2607.18144 | preprint |
+| gatorprism-2026-W30 | GatorPrism: Integrated Spatial Multi-Omics Analysis Framework | DOI:10.64898/2026.07.23.739930 | preprint |
+| bayesian-2026-W30 | Bayesian Uncertainty Quantification for Medical AI Decision-Making Agents | arXiv:2607.20582 | preprint |
+
 ## 2026-W29
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
@@ -22,13 +31,4 @@ paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 �
 | rizdvanetskyi-2026-W28 | Data-Driven Soft Labeling Scales DNA Read Classification to Whole-Body Cell-Type Deconvolution | arXiv:2607.04987 | preprint |
 | asiedu-2026-W28 | Causal ASCEND: Scalable Two-tier Causal Discovery on High Dimensional Multi-omics Data | arXiv:2607.04527 | preprint |
 | bang-2026-W28 | Predicting Therapeutic Outcome via Aligning Patient-Specific Knowledge Graph and Gene-Level Perturbation Representations | arXiv:2607.04557 | preprint |
-
-## 2026-W27
-| record_id | 제목 | DOI / arXiv ID | 상태 |
-|---|---|---|---|
-| dibernardo-2026-W27 | Affinage: genome-scale mechanistic gene annotation from the published literature | arXiv:2607.02217 | preprint |
-| ferreira-2026-W27 | A Novel Machine Learning Approach for Central Nervous System Tumor Classification from DNA Methylation | arXiv:2607.01307 | preprint |
-| liu-2026-W27 | Active-GRPO: Adaptive Imitation and Self-Improving Reasoning for Molecular Optimization | arXiv:2607.00531 | preprint |
-| zhang-2026-W27 | Structured Gaussian Processes for Uncertainty-Aware Classification of High-Dimensional, Small-Sampled Omics Data | arXiv:2607.02103 | preprint |
-| bhattacharya-2026-W27 | An Additive MLP-GNN Framework for Characterizing Chemical and Structural Contributions to Aqueous Solubility | arXiv:2607.02212 | preprint |
 
