@@ -3,6 +3,19 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W31 (2026-08-02)
+- 실행: 전체 파이프라인 완료 (scout→분석3→편집→문체→사실검증→렌더→curator)
+- 수집: 핵심 5편 (유전체 2, 신약AI 2, 임상ML 1) + 와이드 3편
+- 이번 주 흐름: 게놈부터 임상 기록까지 각 레이어 맞춤 아키텍처 — CENO(게놈 세계 모델), Vilya-2(펩타이드 계면), EHR FM(다중모달 임상 EHR)이 동시에 등장
+- 이슈: paper-scout 백그라운드 에이전트가 raw 파일을 다른 논문 세트로 교체해 digest/analysis와 불일치 발생 → digest 및 3개 analysis 파일 전면 재작성
+- 이슈: Wide Angle 섹션 `### W1.` 블록 형식이 렌더러 단일행 계약과 불일치 → 단일행 형식으로 수정 완료
+- 이슈: Threads 섹션 `1.` 번호 목록이 렌더러 `- ` 불릿 계약과 불일치 → 수정 완료
+- 이슈: Sources 테이블 4열 + 마크다운 링크 형식이 렌더러 3열 + 원시 URL 계약과 불일치 → 수정 완료
+- 렌더 결과: HTML 33KB, top5=5, deepdive=1, wide=3, threads=6, sources=10
+- 코드 공개: CENO(완전 공개) + Vilya-2(Riptides 벤치마크 공개) — 나머지 3편 미확인
+- 와이드 승격 후보: Vilya-2가 핵심 축에 들어왔으므로 신약AI-단백질 하위 모달리티로 승격 불필요 (이미 핵심)
+- 개선 과제: NEWSLETTER-FORMAT.md 계약에 Wide Angle 단일행 형식, Threads 불릿 형식, Sources 3열 원시 URL 형식 명시 강화 필요
+
 ## 2026-W30 (2026-07-26)
 - 실행: 전체 파이프라인 정상 완료 (scout→분석3→편집→문체→사실검증→렌더→curator)
 - 수집: 핵심 5편 (바이오인포 2, 신약AI 2, 임상ML 1) + 와이드 2편
