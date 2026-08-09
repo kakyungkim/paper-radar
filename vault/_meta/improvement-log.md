@@ -3,6 +3,21 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W32 (2026-08-09)
+
+**실행 결과**: 핵심 5편 + 와이드 3편 수집. 렌더 성공 (HTML 25,854 bytes).
+
+**이번 주 특이사항**:
+- THBKG: Recursion Pharmaceuticals 공동 저자. 시간 정렬 KG 최초 구현.
+- NeuroVFM(Nature Medicine): 비큐레이션 임상 데이터 524만 건 학습 파운데이션 모델. peer-reviewed.
+- 생존 이진화 비용(MLHC 2026): 방법론 비판 연구 peer-reviewed 통과 — 분야 관행 경계.
+- claim-checker: 12개 수치 전부 원문 대조 통과. NeuroVFM 검증 수준 전향 성분 추가 수정.
+- style-critic: 12건 교정 (명사화 해소 7건, 장문 분리 2건, AI 상투구 제거 1건 등).
+
+**개선 포인트**:
+- 코드 공개 여부 "미확인" vs. "미공개" 구분 필요 (claim-checker 지적). 다음 주부터 raw에서 명시적으로 구분.
+- NeuroVFM 전향 성분 수치(트리아지 정확도 등)는 이차 보도 기반 — 다음 실행 시 원문 직접 확인 권고.
+
 ## 2026-W31 (2026-08-02)
 - 실행: 전체 파이프라인 완료 (scout→분석3→편집→문체→사실검증→렌더→curator)
 - 수집: 핵심 5편 (유전체 2, 신약AI 2, 임상ML 1) + 와이드 3편
