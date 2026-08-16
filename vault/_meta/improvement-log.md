@@ -3,6 +3,15 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W33 실행 메모 (2026-08-16)
+- 논문 7편 수집 (핵심 5 + 와이드 2)
+- 병렬 3렌즈 분석 완료 (method/clinical/industry)
+- claim-checker 2건 수정: At a Glance 반올림(5.4M→5.5M), W1 이미지 용도 오기술 수정
+- style-critic 8건 수정: AI 상투구·번역투 제거
+- 렌더 완료: top5=5, deepdive=1, wide=2, threads=4, sources=10
+- 주목 신호: RetFold/DRR이 단백질 설계 AI 신규성 평가 관행을 흔드는 핵심 논문
+- W1(백혈병 분류기) 임상 접점 뚜렷 — 와이드→핵심 축 승격 검토 제안
+
 ## 2026-W32 (2026-08-09)
 
 **실행 결과**: 핵심 5편 + 와이드 3편 수집. 렌더 성공 (HTML 25,854 bytes).
