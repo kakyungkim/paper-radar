@@ -5,30 +5,33 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
-## 2026-W30
+## 2026-W34
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| harmonization-2026-W30 | Harmonization Benchmark for Foundation Models Across Single-Cell and Spatial Transcriptomics | arXiv:2607.17227 | preprint |
-| reliable-2026-W30 | RELIABLE-BA: Reliability-Aware Multi-Engine Binding Affinity Prediction | arXiv:2607.17601 | preprint |
-| llm-2026-W30 | LLM versus Structure-Based Drug Design: A Spatial Constraint Benchmark | arXiv:2607.18144 | preprint |
-| gatorprism-2026-W30 | GatorPrism: Integrated Spatial Multi-Omics Analysis Framework | DOI:10.64898/2026.07.23.739930 | preprint |
-| bayesian-2026-W30 | Bayesian Uncertainty Quantification for Medical AI Decision-Making Agents | arXiv:2607.20582 | preprint |
+| liu-2026-W34 | Leveraging generative hallucination and biophysics-informed modeling for unified biomolecular sequence-structure co-design | arXiv:2608.17381 | preprint |
+| horvath-2026-W34 | Putting epigenetic aging clocks on trial | DOI:10.1038/s41591-026-04524-1 | peer-reviewed |
+| emitgcl-2026-W34 | Deep-learning-enabled multi-omics analyses for prediction of future metastasis in cancer | DOI:10.1038/s41467-026-76277-x | peer-reviewed |
+| javidi-2026-W34 | Quantum Kernel Estimation for the Discovery of Early Lung Cancer Detection | arXiv:2608.19304 | preprint |
+| wang-2026-W34 | EpiBench: Can LLMs Understand Epitopes for Antibody Drug Discovery? | arXiv:2608.06022 | preprint |
 
-## 2026-W29
+## 2026-W33
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| yesiloglu-2026-W29 | A vision foundation model for single-cell biology via spatial gene cartography | arXiv:2607.14163 | preprint |
-| aksu-2026-W29 | Context-aware sequence-to-function model of human gene regulation | DOI:10.1038/s41467-026-75527-2 | peer-reviewed |
-| dwarampudi-2026-W29 | LATTICE: Graph Self-Supervised Learning for Multimodal Spatial Omics Integration | arXiv:2607.14410 | preprint |
-| guntoro-2026-W29 | Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes | arXiv:2607.14070 | preprint |
-| shah-2026-W29 | Causal Discovery of Radiation Response Mechanisms in Human Cells | arXiv:2607.13994 | preprint |
+| yuan-2026-W33 | scKanFormer: A Transformer-KAN framework with biologically informed attention for cell type annotation in large-scale scRNA-seq data | DOI:10.1371/journal.pcbi.1014607 | peer-reviewed |
+| lavelle-2026-W33 | Large-scale AI-Ready Data for Anti-Cancer Drug Response Modeling | arXiv:2608.11444 | preprint |
+| xu-tongyue-2026-W33 | Is Retrieval All You Need? Assessment and Emergence of Novelty in Protein Structure Generation | arXiv:2608.10598 | preprint |
+| munro-2026-W33 | SVPLEX: A Nextflow Pipeline for Cohort-level Structural Variant Calling | arXiv:2608.11621 | preprint |
+| yeo-2026-W33 | LEN-Seek: Fast and scalable ligand binding-site similarity search in the latent space of an SE(3)-invariant graph VAE | DOI:10.64898/2026.08.14.744759 | preprint |
+| leukemia-2026-W33 | Retrieval-Augmented Vision Foundation Models for Robust Leukemia Cell Classification across Multiple Microscopy Datasets | arXiv:2608.10657 | preprint |
+| spark-paper-2026-W33 | Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill | arXiv:2608.11924 | preprint |
 
-## 2026-W28
+## 2026-W32
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| ismail-2026-W28 | Mapping the path to clinical implementation of multi-omics | DOI:10.1038/s41588-026-02663-2 | peer-reviewed |
-| andrews-2026-W28 | Isoform-level resolution in single-cell CRISPR screens reveals hidden functional consequences of gene perturbation | DOI:10.64898/2026.07.09.737410 | preprint |
-| rizdvanetskyi-2026-W28 | Data-Driven Soft Labeling Scales DNA Read Classification to Whole-Body Cell-Type Deconvolution | arXiv:2607.04987 | preprint |
-| asiedu-2026-W28 | Causal ASCEND: Scalable Two-tier Causal Discovery on High Dimensional Multi-omics Data | arXiv:2607.04527 | preprint |
-| bang-2026-W28 | Predicting Therapeutic Outcome via Aligning Patient-Specific Knowledge Graph and Gene-Level Perturbation Representations | arXiv:2607.04557 | preprint |
-
+| sharipov-2026-W32 | Scaling an Autoregressive Transformer for Single-Cell Generation | arXiv:2608.02961 | preprint |
+| lin-2026-W32 | Learning Molecular Representations from Cellular Phenotypes with Structure Preservation | arXiv:2608.02688 | preprint |
+| siu-2026-W32 | THBKG: A Temporal Biomedical Knowledge Graph for Decision-Aligned Clinical Advancement Prediction | arXiv:2608.05982 | preprint |
+| yadav-2026-W32 | The Cost of Binarizing Survival Outcomes in Clinical Prognostic Modeling | arXiv:2608.04046 | preprint |
+| ma-ziyu-2026-W32 | LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks | arXiv:2608.01964 | preprint |
+| kondepudi-2026-W32 | Health system learning enables generalist neuroimaging models | DOI:10.1038/s41591-026-04497-1 | published |
+| datta-2026-W32 | Frozen but Not Always Accessible: A Representation Analysis of Genomic Language Models | arXiv:2608.05329 | preprint |
