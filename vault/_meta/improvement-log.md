@@ -3,6 +3,12 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W35 (2026-08-30)
+- C4 SALRR: DOI 충돌 가능성 플래그 — 원문 직접 확인 필요
+- C5 Mol-JEPA 모달리티 수 14 vs 12 불일치 — claim-checker가 검토필요: 표기
+- 방법 분석에서 C1·C5 코드 공개 확인 (GitHub)
+- paper-scout: 프록시 차단 환경에서 수집 — bioRxiv 직접 접근 불가. papers.cool·alphaXiv 경로 사용
+
 ## 2026-W34 (2026-08-23)
 - 전체 파이프라인 정상 실행. 5편 코어 + 2편 와이드.
 - 이번 주 특이사항: arXiv 직접 접근 차단(EGRESS_BLOCKED) — 웹서치로 대체. 일부 수치 검토필요 플래그.

@@ -161,6 +161,10 @@ def _parse_glance(body, j, doc):
     return j
 
 
+# 메타 줄 앞에 오는 특수 줄 패턴 — 이 줄들은 meta 슬롯을 차지하지 않는다.
+_META_SKIP_PREFIXES = ("저자:", "**선택 이유**", "사회적 신호:", "> ")
+
+
 def _parse_top5(body, j, doc):
     n = len(body)
     card = None
@@ -175,7 +179,8 @@ def _parse_top5(body, j, doc):
         if m:
             card = {
                 "title": m.group(1).strip(),
-                "meta": "",        # Source · Date · preprint · DOI · code
+                "author": "",      # 저자: ... 줄
+                "meta": "",        # 출처 · 날짜 · preprint · DOI · code 줄
                 "key_point": "",
                 "insight": "",
                 "lenses": [],      # [(name, text)]
@@ -194,15 +199,41 @@ def _parse_top5(body, j, doc):
             j += 1
             continue
 
-        # Key Point
-        m = re.match(r"^\*\*Key Point\*\*\s*[—-]\s*(.+)$", s)
+        # 저자 줄
+        m = re.match(r"^저자:\s*(.+)$", s)
+        if m:
+            card["author"] = m.group(1).strip()
+            j += 1
+            continue
+
+        # 선택 이유 (렌더 미사용, 파싱 소비용)
+        m = re.match(r"^\*\*선택 이유\*\*\s*(.+)$", s)
+        if m:
+            j += 1
+            continue
+
+        # 사회적 신호 (렌더 미사용, 파싱 소비용)
+        m = re.match(r"^사회적 신호:\s*(.+)$", s)
+        if m:
+            j += 1
+            continue
+
+        # blockquote 주의문 (렌더 미사용)
+        if s.startswith("> "):
+            j += 1
+            continue
+
+        # Key Point — `—` 구분자 선택적
+        m = re.match(r"^\*\*Key Point\*\*\s*[—\-]?\s*(.+)$", s)
         if m:
             card["key_point"] = m.group(1).strip()
             j += 1
             continue
 
-        # 💡 인사이트
-        m = re.match(r"^💡\s*\*\*인사이트\*\*\s*[—-]\s*(.+)$", s)
+        # 💡 인사이트 — 이모지가 ** 안팎 어디에도 올 수 있음, `—` 선택적
+        m = re.match(
+            r"^(?:💡\s*\*\*인사이트\*\*|\*\*💡\s*인사이트\*\*)\s*[—\-]?\s*(.+)$", s
+        )
         if m:
             card["insight"] = m.group(1).strip()
             j += 1
@@ -222,7 +253,8 @@ def _parse_top5(body, j, doc):
             j += 1
             continue
 
-        # 메타 줄 (첫 번째 일반 텍스트 줄)
+        # 메타 줄 — 출처·날짜·preprint·DOI·code 줄 (첫 번째 일반 텍스트 줄)
+        # 저자·선택이유·사회적신호 등 이미 처리된 줄은 이 분기까지 오지 않음.
         if not card["meta"] and not s.startswith("#"):
             card["meta"] = s
         j += 1
@@ -415,7 +447,7 @@ def render_top5(doc):
             vparts = [v.strip() for v in re.split(r"[/·,]", card["verify"])]
             verify_badges = " ".join(badge_html(v) for v in vparts if v)
 
-        # preprint/peer 배지 from meta
+        # preprint/peer 배지 — meta(출처 줄)에서 탐색
         meta_badges = ""
         if "preprint" in card["meta"]:
             meta_badges = badge_html("preprint")
@@ -423,6 +455,14 @@ def render_top5(doc):
             meta_badges = badge_html("peer-reviewed")
         if "코드 미공개" in card["meta"]:
             meta_badges += " " + badge_html("코드 미공개 — 재현 불가")
+
+        # 저자 줄
+        author_html = ""
+        if card.get("author"):
+            author_html = (
+                '<p class="text-[12px] text-gray-400 mb-1">%s</p>'
+                % esc(card["author"])
+            )
 
         meta_html = inline(card["meta"]) if card["meta"] else ""
 
@@ -459,7 +499,8 @@ def render_top5(doc):
             <span class="text-xs font-bold text-gray-400">#{idx}</span>
             {meta_badges}
           </div>
-          <h3 class="text-[17px] font-bold text-gray-900 leading-snug mb-2">{title}</h3>
+          <h3 class="text-[17px] font-bold text-gray-900 leading-snug mb-1">{title}</h3>
+          {author}
           <p class="text-[13px] text-gray-500 mb-3">{meta}</p>
 {kp}
 {ins}
@@ -469,6 +510,7 @@ def render_top5(doc):
             idx=idx,
             meta_badges=meta_badges,
             title=inline(card["title"]),
+            author=author_html,
             meta=meta_html,
             kp=kp, ins=ins, lens=lens_html, verify=verify_html,
         ))
@@ -608,7 +650,7 @@ def build_push(doc):
         lines.append("%s %s" % (EMOJI_NUM[idx], title[:60]))
     lines.append("")
     lines.append("🔗 전체 보기: https://kakyungkim.github.io/paper-radar/%s.html" % period)
-    # 첫 핵심 논문 DOI 링크
+    # 첫 핵심 논문 DOI 링크 — meta(출처 줄)에서 탐색
     if doc["top5"]:
         links = list(LINK_RE.finditer(doc["top5"][0].get("meta", "")))
         doi_links = [m for m in links if "doi.org" in m.group(2) or "arxiv.org" in m.group(2)]

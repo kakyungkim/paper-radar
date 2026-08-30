@@ -5,11 +5,15 @@ tags: [신약AI]
 # 🗂 신약AI — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W33 기준) W33 신약AI의 핵심은 단백질 구조 AI 신규성 평가 관행의 재정의와 데이터 인프라 표준화다. RetFold/DRR(Xu 외, arXiv:2608.10598)은 검색 증강 생성(RAG) 방식 단백질 구조 모델이 훈련 데이터에서 재조합된 구조를 만든다는 점을 실증하며, 기존 신규성 평가 지표의 한계를 정면으로 드러냈다. IMPROVE DRP(Lavelle 외, arXiv:2608.11444)는 CANDLE/IMPROVE 프레임워크로 항암제 반응 예측 모델 비교를 위한 AI 표준 데이터 인프라를 제시한다. LEN-Seek(Yeo 외, DOI:10.64898/2026.08.14.744759)은 SE(3)-불변 그래프 VAE 잠재공간에서 결합부위(binding site) 유사성 검색 속도를 대규모로 높여 약물 재창출(drug repurposing) 파이프라인에 실용적 도구를 더한다. W32의 표현형 기반 학습·LLM 역량 진단에서 W33은 평가 관행 비판과 데이터 표준화라는 기반 작업으로 방향이 이동한다.
+(2026-W35 기준) W35 신약AI는 mRNA 치료제 제조 파이프라인 최적화와 멀티모달 분자 표현 학습의 아키텍처 혁신이 두 축이다. Zheng 외(arXiv:2608.23722)는 10만 개 올리고뉴클레오타이드 라이브러리의 IVT(시험관 전사) RNA 생산량을 대규모 NGS로 측정하고 CNN 기반 딥러닝 모델로 예측해 보류 테스트 세트 Pearson r=0.94를 달성하며, mRNA 백신·단백질 대체 요법 제조의 핵심 병목을 직접 해결한다. Rottach 외(arXiv:2608.22642)의 Mol-JEPA는 JEPA(Joint Embedding Predictive Architecture) 프레임워크를 분자 도메인에 처음 적용해 구조·세포 표현형·ADMET·양자화학 등 복수 모달리티를 모달리티 마스킹으로 통합 학습한다. Boehringer Ingelheim 공동 연구라는 점에서 제약산업 적용 가능성이 전면에 드러난다. W33의 평가 관행 비판·데이터 인프라 표준화에서 W35는 제조 최적화와 아키텍처 혁신이라는 실용적 방향으로 전환된다.
 
-(이전) W32 기준 세포 표현형 기반 학습과 항체 설계 LLM 평가가 두 핵심 방향이었다. Lin 외(arXiv:2608.02688)는 세포 형태학적 표현형에서 구조 보존형 분자 표현(molecular representation)을 학습해 고처리량 표현형 스크리닝(phenotypic screening) 데이터를 신약 설계에 연결했다. EpiBench(Wang 외, arXiv:2608.06022)는 에피토프(epitope) 이해 능력을 LLM 간 체계적으로 비교하는 첫 벤치마크였고, THBKG(Siu 외, arXiv:2608.05982, Recursion Pharmaceuticals 공동)는 시간 정렬 지식 그래프를 임상 진전 예측에 처음 구현했다.
+(이전) W33 기준 단백질 구조 AI 신규성 평가 관행 재정의와 데이터 인프라 표준화가 핵심이었다. RetFold/DRR(Xu 외, arXiv:2608.10598)은 RAG 방식 구조 모델이 훈련 데이터 재조합 구조를 만든다는 점을 실증했고, IMPROVE DRP(Lavelle 외)는 항암제 반응 예측 AI 표준 인프라를, LEN-Seek(Yeo 외)는 결합부위 유사성 고속 검색 도구를 각각 제시했다.
 
 ## 타임라인
+### 2026-W35 (2026-08-24~08-30)
+- [[mRNA 수율 DNN 최적화]] — 대규모 병렬 스크리닝+CNN으로 IVT RNA 생산량 예측(r=0.94), mRNA 제조 병목 해결 (arXiv:2608.23722) [preprint]
+- [[Mol-JEPA]] — JEPA 프레임워크로 분자 14+ 모달리티 통합 표현 학습, Boehringer Ingelheim 공동, 신약 설계 벤치마크 다수 성능 보고 (arXiv:2608.22642) [preprint]
+
 ### 2026-W33 (2026-08-10~08-16)
 - [[2026-W33]] — RetFold/DRR(Xu 외): 검색 증강 단백질 구조 생성의 신규성 한계 실증, 구조 AI 평가 관행 재정의 (arXiv:2608.10598) [preprint]
 - [[2026-W33]] — IMPROVE DRP(Lavelle 외): 항암제 반응 모델링용 대규모 AI 표준 데이터 인프라 제시, CANDLE/IMPROVE 프레임워크 (arXiv:2608.11444) [preprint]
