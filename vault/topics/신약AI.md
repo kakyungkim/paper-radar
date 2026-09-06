@@ -5,11 +5,15 @@ tags: [신약AI]
 # 🗂 신약AI — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W35 기준) W35 신약AI는 mRNA 치료제 제조 파이프라인 최적화와 멀티모달 분자 표현 학습의 아키텍처 혁신이 두 축이다. Zheng 외(arXiv:2608.23722)는 10만 개 올리고뉴클레오타이드 라이브러리의 IVT(시험관 전사) RNA 생산량을 대규모 NGS로 측정하고 CNN 기반 딥러닝 모델로 예측해 보류 테스트 세트 Pearson r=0.94를 달성하며, mRNA 백신·단백질 대체 요법 제조의 핵심 병목을 직접 해결한다. Rottach 외(arXiv:2608.22642)의 Mol-JEPA는 JEPA(Joint Embedding Predictive Architecture) 프레임워크를 분자 도메인에 처음 적용해 구조·세포 표현형·ADMET·양자화학 등 복수 모달리티를 모달리티 마스킹으로 통합 학습한다. Boehringer Ingelheim 공동 연구라는 점에서 제약산업 적용 가능성이 전면에 드러난다. W33의 평가 관행 비판·데이터 인프라 표준화에서 W35는 제조 최적화와 아키텍처 혁신이라는 실용적 방향으로 전환된다.
+(2026-W36 기준) W36 신약AI는 RNA 전달 기술의 합성생물학적 재설계와 소분자 약물-표적 상호작용(DTI) 예측 방법론의 다중 척도 정밀화가 두 축이다. Schuhmacher 외(Nature, DOI:10.1038/s41586-026-10952-3)의 STV-C8은 AI 설계 합성 단백질로 구성한 RNA 전달 비히클(RNA transfer vehicle)이 in vivo 마우스에서 기능적 mRNA를 세포 내로 전달함을 보이며, LNP(지질나노입자) 기반 전달의 대안 경로를 실증했다. Nature peer-reviewed 완전 검증 논문이며 신약개발 산업 관점에서 mRNA 치료제 모달리티 다각화에 직결된다. Hao 외(arXiv:2609.02549)의 ProbeMatchDTI는 탐침(probe) 기반 다중 척도 생화학 패턴 매칭으로 DTI 예측에서 약한 결합 신호(weak interaction)를 보존하는 설계를 제시하며, BindingDB AUC 기준 기존 대비 +2.0%(초록 기준)를 보고한다. W35의 제조 최적화·아키텍처 혁신에서 W36은 전달 플랫폼 다각화와 DTI 정밀도 향상으로 이동한다.
 
-(이전) W33 기준 단백질 구조 AI 신규성 평가 관행 재정의와 데이터 인프라 표준화가 핵심이었다. RetFold/DRR(Xu 외, arXiv:2608.10598)은 RAG 방식 구조 모델이 훈련 데이터 재조합 구조를 만든다는 점을 실증했고, IMPROVE DRP(Lavelle 외)는 항암제 반응 예측 AI 표준 인프라를, LEN-Seek(Yeo 외)는 결합부위 유사성 고속 검색 도구를 각각 제시했다.
+(이전) W35 기준 mRNA 치료제 제조 병목 해결(Zheng 외, IVT RNA 수율 예측 r=0.94)과 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)가 핵심이었다.
 
 ## 타임라인
+### 2026-W36 (2026-08-31~09-06)
+- [[STV-C8]] — AI 설계 합성 단백질 RNA 전달 비히클, in vivo 마우스 전임상 검증, LNP 대안 경로 실증 (DOI:10.1038/s41586-026-10952-3) [peer-reviewed]
+- [[ProbeMatchDTI]] — 탐침 기반 다중 척도 DTI 예측, 약한 결합 신호 보존, BindingDB AUC +2.0%(초록 기준), 코드 공개 (arXiv:2609.02549) [preprint]
+
 ### 2026-W35 (2026-08-24~08-30)
 - [[mRNA 수율 DNN 최적화]] — 대규모 병렬 스크리닝+CNN으로 IVT RNA 생산량 예측(r=0.94), mRNA 제조 병목 해결 (arXiv:2608.23722) [preprint]
 - [[Mol-JEPA]] — JEPA 프레임워크로 분자 14+ 모달리티 통합 표현 학습, Boehringer Ingelheim 공동, 신약 설계 벤치마크 다수 성능 보고 (arXiv:2608.22642) [preprint]

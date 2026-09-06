@@ -3,6 +3,13 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W36 (2026-09-06)
+
+- 파이프라인 정상 실행: paper-scout → method/clinical/industry-analyst(병렬) → digest-editor → style-critic(8건) → claim-checker(3건: STV-C8 10만배→100만배 수정, SIGKDD 미확인 표기, 형질감염율 플래그 확인) → render_html.py(성공) → knowledge-curator
+- 이번 주 하이라이트: AI 설계 합성 단백질 RNA 전달 비히클(STV-C8, Nature peer-reviewed), ProbeMatchDTI(코드 공개, DTI 약한 신호 보존)
+- Wide Angle 렌더 메모: Wide Angle 설명이 같은 줄에 없으면 렌더에서 빠짐 → 다음 주 digest 작성 시 "**제목** · [DOI](url) — 설명 한 줄" 형식으로 작성 권장
+- probes: arXiv·bioRxiv 직접 접근 차단, 검색 스니펫 기반 수집 유지 중. STV-C8 원문 풀텍스트 paywall — 검토필요: 플래그 유지.
+
 ## 2026-W35 (2026-08-30)
 - C4 SALRR: DOI 충돌 가능성 플래그 — 원문 직접 확인 필요
 - C5 Mol-JEPA 모달리티 수 14 vs 12 불일치 — claim-checker가 검토필요: 표기

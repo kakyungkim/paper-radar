@@ -5,11 +5,15 @@ tags: [LLM-bio]
 # 🗂 LLM-bio — 주제 지도(MOC)
 
 ## 핵심 흐름
-(2026-W35 기준) W35 LLM-bio는 분자 멀티모달 파운데이션 모델의 아키텍처 혁신과 공간 전사체 파운데이션 모델의 확장이 핵심이다. Rottach 외(arXiv:2608.22642)의 Mol-JEPA는 JEPA(Joint Embedding Predictive Architecture) 프레임워크를 분자 표현에 처음 도입해, 기존 대조 학습 방식에서 문제가 됐던 모달리티 붕괴(modality collapse)와 화학적으로 비유효한 증강(augmentation) 문제를 원리적으로 회피한다. Boehringer Ingelheim 공동 연구로 제약산업 직결 적용이 가시화된다. Xiao 외(arXiv:2608.26208)의 GITIII-scale은 팬-암 공간 전사체와 scRNA-seq를 통합하는 계층적 그래프 트랜스포머 파운데이션 모델로, TME(종양 미세환경) 세포 상태-니치 표현 학습에 특화된다. W32의 스케일링·신호 추출·진단에서 W35는 분자 표현 아키텍처 혁신과 다중 오믹스 파운데이션 모델 확장으로 이동한다.
+(2026-W36 기준) W36 LLM-bio는 단일세포 파운데이션 모델의 개방형 발견 프레임워크 확장과 바이오메디컬 파운데이션 모델 전반의 투명성·재현성 기준 정립이 핵심 방향이다. Zhang 외(arXiv:2609.00681)의 PROSPECTor는 단일세포 표현 공간에서 연구자 정의 생물학적 질문에 따라 탐색 경로를 동적으로 구성하는 개방형 발견(open-ended discovery) 프레임워크로, 기존 scFM(단일세포 파운데이션 모델) 비교 평가 패러다임을 넘어 실제 연구 시나리오 중심 평가를 제안한다. Saez-Rodriguez 외(Nature Methods, DOI:10.1038/s41592-026-03182-y)의 벤치마킹 Perspective는 바이오메디컬 FM 평가 기준의 파편화 문제를 정면으로 다루며, 투명성·재현성·임상 관련성 세 축을 기준 프레임으로 제시한다. 동료심사 Perspective 논문이라는 점에서 분야 표준 논의의 거점이 될 가능성이 있다. W35의 분자 표현 아키텍처 혁신에서 W36은 평가 인프라 표준화와 발견 프레임워크 확장으로 이동한다.
 
-(이전) W32 기준 단일세포 생성 AR 트랜스포머 스케일링(Sharipov 외)과 세포 표현형-분자 표현 연결(Lin 외), EpiBench 항체 LLM 평가, 유전체 LM 표현 진단(Datta 외) 4편이 스케일링·신호 추출·평가 세 방향으로 분화됐다.
+(이전) W35 기준 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)와 GITIII-scale 팬-암 공간 전사체 파운데이션 모델이 핵심이었다.
 
 ## 타임라인
+### 2026-W36 (2026-08-31~09-06)
+- [[PROSPECTor]] — 단일세포 표현 공간 개방형 발견 프레임워크, scFM 비교 평가 넘어 연구 시나리오 중심 평가 제안 (arXiv:2609.00681) [preprint]
+- [[바이오메디컬-FM-벤치마킹]] — Nature Methods Perspective, 바이오메디컬 FM 투명성·재현성·임상 관련성 기준 프레임 제시 (DOI:10.1038/s41592-026-03182-y) [peer-reviewed]
+
 ### 2026-W35 (2026-08-24~08-30)
 - [[Mol-JEPA]] — JEPA 프레임워크 분자 도메인 최초 적용, 14+ 모달리티 마스킹 통합 학습, Boehringer Ingelheim 공동 (arXiv:2608.22642) [preprint] — 참조: [[신약AI#2026-W35]]
 - [[GITIII-scale TME]] — 팬-암 공간 전사체+scRNA-seq 계층적 그래프 트랜스포머, 세포 상태-니치 표현 파운데이션 모델 (방법 교차) (arXiv:2608.26208) [preprint] — 참조: [[유전체#2026-W35]]

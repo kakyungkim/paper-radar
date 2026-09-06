@@ -5,6 +5,15 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
+## 2026-W36
+| record_id | 제목 | DOI / arXiv ID | 상태 |
+|---|---|---|---|
+| schuhmacher-2026-W36 | Creating bottom-up RNA transfer vehicles from synthetic protein assemblies | DOI:10.1038/s41586-026-10952-3 | peer-reviewed |
+| zhang-prospector-2026-W36 | Operationalizing open-ended biological discovery across single-cell representations | arXiv:2609.00681 | preprint |
+| zhou-subcell-2026-W36 | Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information | arXiv:2609.02344 | preprint |
+| hao-probematch-2026-W36 | ProbeMatchDTI: Probe-Driven Multi-Scale Biochemical Pattern Matching for Drug-Target Interaction Prediction | arXiv:2609.02549 | preprint |
+| saezrodriguez-benchmarking-2026-W36 | Benchmarking biomedical foundation models | DOI:10.1038/s41592-026-03182-y | peer-reviewed |
+
 ## 2026-W34
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
@@ -25,13 +34,3 @@ paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 �
 | leukemia-2026-W33 | Retrieval-Augmented Vision Foundation Models for Robust Leukemia Cell Classification across Multiple Microscopy Datasets | arXiv:2608.10657 | preprint |
 | spark-paper-2026-W33 | Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill | arXiv:2608.11924 | preprint |
 
-## 2026-W32
-| record_id | 제목 | DOI / arXiv ID | 상태 |
-|---|---|---|---|
-| sharipov-2026-W32 | Scaling an Autoregressive Transformer for Single-Cell Generation | arXiv:2608.02961 | preprint |
-| lin-2026-W32 | Learning Molecular Representations from Cellular Phenotypes with Structure Preservation | arXiv:2608.02688 | preprint |
-| siu-2026-W32 | THBKG: A Temporal Biomedical Knowledge Graph for Decision-Aligned Clinical Advancement Prediction | arXiv:2608.05982 | preprint |
-| yadav-2026-W32 | The Cost of Binarizing Survival Outcomes in Clinical Prognostic Modeling | arXiv:2608.04046 | preprint |
-| ma-ziyu-2026-W32 | LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks | arXiv:2608.01964 | preprint |
-| kondepudi-2026-W32 | Health system learning enables generalist neuroimaging models | DOI:10.1038/s41591-026-04497-1 | published |
-| datta-2026-W32 | Frozen but Not Always Accessible: A Representation Analysis of Genomic Language Models | arXiv:2608.05329 | preprint |
