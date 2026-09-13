@@ -2,6 +2,11 @@
 type: moc
 tags: [신약AI]
 ---
+## 2026-W37 핵심 흐름
+W37 신약AI는 섭동 프로테오믹스(perturbation proteomics) 기반 가상세포 모델이 다중 암종 약물 반응 예측에 peer-reviewed 실증(Nature)된 주차다. PROTAC 분해 효율의 few-shot 범-E3-리가아제 예측(ProMeta)과 CRISPR 스크리닝 적응형 히트 발굴(Biology-in-the-loop)이 함께 AI 실험 예산 압축 패턴을 공유한다.
+[[papers-2026-W37]] | [[2026-W37]]
+
+---
 # 🗂 신약AI — 주제 지도(MOC)
 
 ## 핵심 흐름

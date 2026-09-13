@@ -2,6 +2,11 @@
 type: moc
 tags: [임상ML]
 ---
+## 2026-W37 핵심 흐름
+W37 임상ML은 관상동맥 조영술(coronary angiography)의 단대단(end-to-end) 해석을 감사 가능한 추론(auditable reasoning) 체계로 구현한 CARDEA(arXiv:2609.06931)가 핵심이다. 섭동 프로테오믹스 기반 가상세포 모델(ProteinTalks, Nature)의 약물 반응 예측도 임상 적용 가능성 측면에서 교차하며, 임상 AI의 설명 가능성 요구가 구체적 시스템으로 구현되는 방향이 가시화된다.
+[[papers-2026-W37]] | [[2026-W37]]
+
+---
 # 🗂 임상ML — 주제 지도(MOC)
 
 ## 핵심 흐름

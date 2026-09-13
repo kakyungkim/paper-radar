@@ -3,6 +3,14 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W37 (2026-09-13)
+- 핵심 5편: ProteinTalks(Nature), ProMeta(arXiv), Biology-in-the-loop(arXiv/Genentech), CARDEA(arXiv), CIDER(bioRxiv)
+- 와이드 3편: 분자생성 체계적 평가(JCIM), UniH³(arXiv), 두경부암 단핵구 프로테오믹스(bioRxiv)
+- claim-check: 수정 2건(ProMeta 코드 공개 표기 오기, W1 프레임워크 수 오기)
+- style-critic: 수정 7건
+- 렌더: 1회 성공, HTML 36KB
+- 특이사항: 이번 주 가상세포 모델(C1)과 순차 실험 설계(C3)가 각각 신약 효능 예측과 CRISPR 히트 발굴에서 AI 실험 예산 압축 패턴을 공유함.
+
 ## 2026-W36 (2026-09-06)
 
 - 파이프라인 정상 실행: paper-scout → method/clinical/industry-analyst(병렬) → digest-editor → style-critic(8건) → claim-checker(3건: STV-C8 10만배→100만배 수정, SIGKDD 미확인 표기, 형질감염율 플래그 확인) → render_html.py(성공) → knowledge-curator
