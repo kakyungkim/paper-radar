@@ -3,6 +3,16 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W38 (2026-09-20) — 자동 실행
+
+- **파이프라인**: paper-scout → method/clinical/industry 병렬 → digest-editor → style-critic → claim-checker → digest-renderer → knowledge-curator
+- **수집**: 핵심 5편(신약AI/임상ML/바이오인포/유전체) + 와이드 3편 / arXiv 8건 / bioRxiv 0건
+- **이번 주 주요 흐름**: 대형 인프라 없이 AI 활용 — 데이터 효율(scKITE), 소비자 하드웨어 WGS(C4), EHR 재창출(C5), 면역 다층위 월드 모델(C1)
+- **수치 검증**: 12건 대조, 수정 0건, 검토필요 1건(C4 71% 수치)
+- **style-critic**: 13건 수정 (AI 상투구 5건, 번역투 2건, 구조 5건)
+- **렌더**: HTML 36KB, push md 894B, deepdive md 2.7KB
+- **특이사항**: arxiv.org 직접 접속 차단 — GitHub DailyArXiv 이슈 + WebSearch 조합으로 수집; scKITE만 코드 공개
+
 ## 2026-W37 (2026-09-13)
 - 핵심 5편: ProteinTalks(Nature), ProMeta(arXiv), Biology-in-the-loop(arXiv/Genentech), CARDEA(arXiv), CIDER(bioRxiv)
 - 와이드 3편: 분자생성 체계적 평가(JCIM), UniH³(arXiv), 두경부암 단핵구 프로테오믹스(bioRxiv)
