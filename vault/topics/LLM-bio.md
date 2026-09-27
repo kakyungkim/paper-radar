@@ -2,9 +2,9 @@
 type: moc
 tags: [LLM-bio]
 ---
-## 2026-W37 핵심 흐름
-W37은 LLM-bio 직접 논문보다 인접 영역에서 생물학 AI의 설명 가능성 요구가 구체화되는 주차다. CARDEA(arXiv:2609.06931)의 감사 가능한 추론(auditable reasoning) 체계는 임상 영상 AI에서 해석 가능성을 구현한 실용 사례를 추가하고, ProteinTalks(Nature)의 섭동 프로테오믹스 가상세포 모델은 멀티오믹스 기반 파운데이션 모델이 약물 반응 예측으로 직결되는 경로를 실증한다.
-[[papers-2026-W37]] | [[2026-W37]]
+## 2026-W39 핵심 흐름
+W39 LLM-bio는 QLoRA 미세조정(arXiv:2609.24538)이 핵심이다. Ministral LLM을 QLoRA로 미세조정해 단백질 서열에서 기능 주석(sequence-to-function annotation)을 생성하는 접근으로, 대형 모델의 파라미터 효율 학습을 단백질 기능 예측 도메인에 이식한 사례다. 다만 정량 수치가 명시되지 않아 평가의 독립성 문제가 있으며, 임상·산업 함의는 현 단계에서 제한적이다. 이전 주차까지 평가 인프라 표준화와 발견 프레임워크 확장이라는 흐름에서 W39는 경량화 학습이 단백질 주석 영역으로 침투하는 신호를 보인다.
+[[papers-2026-W39]] | [[2026-W39]]
 
 ---
 # 🗂 LLM-bio — 주제 지도(MOC)
@@ -15,6 +15,9 @@ W37은 LLM-bio 직접 논문보다 인접 영역에서 생물학 AI의 설명 �
 (이전) W35 기준 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)와 GITIII-scale 팬-암 공간 전사체 파운데이션 모델이 핵심이었다.
 
 ## 타임라인
+### 2026-W39 (2026-09-21~09-27)
+- [[QLoRA-protein-annotation]] — Ministral LLM QLoRA 미세조정으로 단백질 서열-기능 주석 생성, 파라미터 효율 학습의 단백질 도메인 이식 (arXiv:2609.24538) [preprint]
+
 ### 2026-W36 (2026-08-31~09-06)
 - [[PROSPECTor]] — 단일세포 표현 공간 개방형 발견 프레임워크, scFM 비교 평가 넘어 연구 시나리오 중심 평가 제안 (arXiv:2609.00681) [preprint]
 - [[바이오메디컬-FM-벤치마킹]] — Nature Methods Perspective, 바이오메디컬 FM 투명성·재현성·임상 관련성 기준 프레임 제시 (DOI:10.1038/s41592-026-03182-y) [peer-reviewed]

@@ -3,6 +3,13 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W39 (2026-09-27)
+- 수집: bioRxiv 2편 + arXiv 4편, 핵심 5 + 와이드 3
+- 코드 공개: C2 MIRCID만 (4편 미공개 — 재현성 약점 지속)
+- claim-check: EMNLP 2026 채택 미확인(C2) — 다음 주 재확인 필요
+- 와이드 승격 후보: JEPA-Anything(W1) — 생물학·임상 궤적 도메인 포함, 핵심 축 경계
+- 약한 렌즈: C4 QLoRA — 정량 수치 미명시, 평가 순환성 문제로 임상·산업 함의 제한적
+
 ## 2026-W38 (2026-09-20) — 자동 실행
 
 - **파이프라인**: paper-scout → method/clinical/industry 병렬 → digest-editor → style-critic → claim-checker → digest-renderer → knowledge-curator
