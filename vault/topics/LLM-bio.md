@@ -2,9 +2,9 @@
 type: moc
 tags: [LLM-bio]
 ---
-## 2026-W39 핵심 흐름
-W39 LLM-bio는 QLoRA 미세조정(arXiv:2609.24538)이 핵심이다. Ministral LLM을 QLoRA로 미세조정해 단백질 서열에서 기능 주석(sequence-to-function annotation)을 생성하는 접근으로, 대형 모델의 파라미터 효율 학습을 단백질 기능 예측 도메인에 이식한 사례다. 다만 정량 수치가 명시되지 않아 평가의 독립성 문제가 있으며, 임상·산업 함의는 현 단계에서 제한적이다. 이전 주차까지 평가 인프라 표준화와 발견 프레임워크 확장이라는 흐름에서 W39는 경량화 학습이 단백질 주석 영역으로 침투하는 신호를 보인다.
-[[papers-2026-W39]] | [[2026-W39]]
+## 2026-W40 핵심 흐름
+W40 LLM-bio의 중심은 LEMON-ZEST(arXiv:2609.37675)다. 단백질 언어 모델의 토크나이징 방식 자체를 바꾼 논문으로, 생화학적으로 치환 가능한 아미노산 n-gram 클러스터를 기반으로 32K 어휘 ZEST 토크나이저를 구성했다. NeurIPS 2026 채택, HuggingFace 모델 공개로 W40 LLM-bio 논문 중 즉시 활용 가능성이 가장 높다. W39의 경량화 미세조정 흐름에서 W40은 토크나이징 단위 자체를 생물학적 의미 단위로 재정의하는 방향이 새롭게 등장했다.
+[[papers-2026-W40]] | [[2026-W40]]
 
 ---
 # 🗂 LLM-bio — 주제 지도(MOC)
@@ -15,6 +15,11 @@ W39 LLM-bio는 QLoRA 미세조정(arXiv:2609.24538)이 핵심이다. Ministral L
 (이전) W35 기준 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)와 GITIII-scale 팬-암 공간 전사체 파운데이션 모델이 핵심이었다.
 
 ## 타임라인
+### 2026-W40 (2026-09-28~2026-10-04)
+- [[lemon-zest-2026-W40]] — LEMON-ZEST: 진화 정보 기반 ZEST 토크나이저로 단백질 언어 모델 효율화, NeurIPS 2026 채택, HuggingFace 모델 공개 ([arXiv](https://arxiv.org/abs/2609.37675))
+  - 핵심: 32K 어휘 아미노산 n-gram 클러스터 기반 토크나이징, 203M 파라미터 트랜스포머, 폴드 유사도 검색 성능 향상
+  - 검증: in silico
+
 ### 2026-W39 (2026-09-21~09-27)
 - [[QLoRA-protein-annotation]] — Ministral LLM QLoRA 미세조정으로 단백질 서열-기능 주석 생성, 파라미터 효율 학습의 단백질 도메인 이식 (arXiv:2609.24538) [preprint]
 

@@ -2,9 +2,9 @@
 type: moc
 tags: [신약AI]
 ---
-## 2026-W39 핵심 흐름
-W39 신약AI는 MIRCID(arXiv:2609.21280)가 핵심이다. 허브 miRNA(hub-miRNA) 네트워크를 추론해 약물 기전 모델링(drug mechanistic modeling) 여러 태스크에 교차 개선(cross-task improvement)을 이끄는 방식으로, 단일 태스크 학습의 한계를 miRNA 조절망 수준의 공유 표현으로 극복한다. 코드 공개 여부가 이번 주 핵심 변수이며, EMNLP 2026 채택 표기는 다음 주 재확인이 필요하다. W38의 인프라·효율 방향에서 W39는 조절망 기반 다중 태스크 표현 학습이라는 방법론 방향이 추가된다.
-[[papers-2026-W39]] | [[2026-W39]]
+## 2026-W40 핵심 흐름
+W40 신약AI는 DTI 예측과 단백질 공학이라는 두 방향에서 동시에 이동했다. dti-cross-attention(arXiv:2609.34921)은 화학 언어 모델(SMILES 기반)과 단백질 언어 모델을 위계적 순차 교차 어텐션(hierarchical sequential cross-attention)으로 이어 붙여 DTI 예측 정확도를 높이는 접근이다. struct-rl-directed-evo(arXiv:2609.39048)는 단백질 지향 진화(directed evolution)에 RL을 적용할 때 3차 구조 정보를 함께 인코딩해 탐색 효율을 높이는 구조 인식 RL 프레임워크다. 두 논문 모두 코드 미공개, in silico 검증 단계에 머물러 있다는 공통 한계가 있다. W39의 조절망 기반 다중 태스크 표현에서 W40은 이중 언어 모델 융합과 구조 제약 RL이라는 방법론 방향이 부각된다.
+[[papers-2026-W40]] | [[2026-W40]]
 
 ---
 # 🗂 신약AI — 주제 지도(MOC)
@@ -15,6 +15,14 @@ W39 신약AI는 MIRCID(arXiv:2609.21280)가 핵심이다. 허브 miRNA(hub-miRNA
 (이전) W35 기준 mRNA 치료제 제조 병목 해결(Zheng 외, IVT RNA 수율 예측 r=0.94)과 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)가 핵심이었다.
 
 ## 타임라인
+### 2026-W40 (2026-09-28~2026-10-04)
+- [[dti-cross-attention-2026-W40]] — 화학·단백질 언어 모델 위계적 순차 교차 어텐션으로 DTI 예측 ([arXiv](https://arxiv.org/abs/2609.34921))
+  - 핵심: SMILES 기반 화학 LM과 단백질 LM을 교차 어텐션으로 융합, 분자-서열 이중 계층 표현 학습
+  - 검증: in silico
+- [[struct-rl-directed-evo-2026-W40]] — 단백질 지향 진화에 구조 인식 강화학습 적용 ([arXiv](https://arxiv.org/abs/2609.39048))
+  - 핵심: RL 탐색 시 단백질 3차 구조 정보를 함께 인코딩해 기능 향상 돌연변이 탐색 효율화
+  - 검증: in silico
+
 ### 2026-W39 (2026-09-21~09-27)
 - [[MIRCID]] — 허브 miRNA 네트워크 추론 기반 약물 기전 모델링 교차 태스크 개선, 조절망 공유 표현 학습 (arXiv:2609.21280) [preprint]
 

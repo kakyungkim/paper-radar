@@ -3,6 +3,14 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W40 (2026-10-04) 실행 메모
+- 소스: arXiv 8편 (bioRxiv/medRxiv/PubMed 직접 차단 — GitHub DailyArXiv 트래커 사용)
+- 핵심 5편: DTI 교차어텐션, LEMON-ZEST, 구조인식 RL, MoSPR, EHRFlow
+- 약했던 렌즈: 저자·소속 정보 대부분 미확인 (프록시 차단)
+- claim-checker: NeurIPS 2026 채택(C2, W2) 미확인 — 검토필요: 표기 10건
+- 와이드 승격 후보: W3(AI 유사분열상 계수) — 임상 AI 분야 계속 주목
+- 코드 공개율: 1/5 (LEMON-ZEST만 공개) — 낮음
+
 ## 2026-W39 (2026-09-27)
 - 수집: bioRxiv 2편 + arXiv 4편, 핵심 5 + 와이드 3
 - 코드 공개: C2 MIRCID만 (4편 미공개 — 재현성 약점 지속)
