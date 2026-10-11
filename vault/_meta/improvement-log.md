@@ -3,6 +3,13 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W41 (2026-10-11)
+- 수집: arXiv 6편 + bioRxiv 1편. 핵심 5 + 와이드 2.
+- 프록시 제약: arxiv.org 직접 접근 불가 — spaceship/newDailyArxiv GitHub 이슈 기반 수집. 초록 미확인 논문 4편(C2-C5).
+- 검증 이중 게이트: style-critic 9건 수정, claim-checker 3건(TDP-43 유병률 외부통계 검토필요 추가).
+- 와이드: W1(트랜스포머 < 6공변량)이 임상ML 승격 후보로 반복 패턴. 다음 주 와이드에서 재등장 시 핵심 축 검토.
+- 코드 미공개: 핵심 5편 모두 코드 비공개 — 재현성 약점 지속.
+
 ## 2026-W40 (2026-10-04) 실행 메모
 - 소스: arXiv 8편 (bioRxiv/medRxiv/PubMed 직접 차단 — GitHub DailyArXiv 트래커 사용)
 - 핵심 5편: DTI 교차어텐션, LEMON-ZEST, 구조인식 RL, MoSPR, EHRFlow
