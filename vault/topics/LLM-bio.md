@@ -2,9 +2,9 @@
 type: moc
 tags: [LLM-bio]
 ---
-## 2026-W40 핵심 흐름
-W40 LLM-bio의 중심은 LEMON-ZEST(arXiv:2609.37675)다. 단백질 언어 모델의 토크나이징 방식 자체를 바꾼 논문으로, 생화학적으로 치환 가능한 아미노산 n-gram 클러스터를 기반으로 32K 어휘 ZEST 토크나이저를 구성했다. NeurIPS 2026 채택, HuggingFace 모델 공개로 W40 LLM-bio 논문 중 즉시 활용 가능성이 가장 높다. W39의 경량화 미세조정 흐름에서 W40은 토크나이징 단위 자체를 생물학적 의미 단위로 재정의하는 방향이 새롭게 등장했다.
-[[papers-2026-W40]] | [[2026-W40]]
+## 2026-W42 핵심 흐름
+W42 LLM-bio의 두 핵심 논문은 모두 평가 인프라 방향이다. OmicsBench(arXiv:2610.21074)는 오믹스 연구 스케일의 장기 다회전(long-horizon multi-turn) AI 에이전트 벤치마크로, 단일 질의가 아니라 실제 연구 흐름을 복제한 평가 환경을 구축한다. 동결 단백질 인코더 진단 벤치마크(arXiv:2610.18879)는 frozen pLM이 다운스트림 과제에서 실제로 무엇을 인코딩하는지를 구조화된 프로브 세트로 진단한다. 두 논문 모두 in silico/프리프린트 단계이며 코드 공개 미확인. W40의 토크나이징 단위 재정의에서 W42는 에이전트 능력과 표현 진단이라는 평가 인프라 방향으로 이동한다.
+[[papers-2026-W42]] | [[2026-W42]]
 
 ---
 # 🗂 LLM-bio — 주제 지도(MOC)
@@ -15,6 +15,14 @@ W40 LLM-bio의 중심은 LEMON-ZEST(arXiv:2609.37675)다. 단백질 언어 모�
 (이전) W35 기준 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)와 GITIII-scale 팬-암 공간 전사체 파운데이션 모델이 핵심이었다.
 
 ## 타임라인
+### 2026-W42 (2026-10-12~2026-10-18)
+- 2026-W42 | [[omicsbench-2026-W42]] OmicsBench — 오믹스 연구 스케일 장기 다회전 AI 에이전트 벤치마크 ([arXiv](https://arxiv.org/abs/2610.21074))
+  - 핵심: 단일 질의 벤치마크가 아닌 실제 연구 워크플로우 스케일 평가 환경; LLM 에이전트의 바이오인포 실용 능력 진단
+  - 검증: 추정 in silico (초록 미확인); preprint
+- 2026-W42 | [[frozen-protein-bench-2026-W42]] A Diagnostic Benchmark of Frozen Protein Encoders — 동결 pLM 인코더 표현 진단 벤치마크 ([arXiv](https://arxiv.org/abs/2610.18879))
+  - 핵심: frozen 단백질 언어 모델이 실제로 무엇을 인코딩하는지 구조화된 프로브로 진단; 다운스트림 과제별 적합 인코더 체계적 분류
+  - 검증: 추정 in silico (초록 미확인); preprint
+
 ### 2026-W40 (2026-09-28~2026-10-04)
 - [[lemon-zest-2026-W40]] — LEMON-ZEST: 진화 정보 기반 ZEST 토크나이저로 단백질 언어 모델 효율화, NeurIPS 2026 채택, HuggingFace 모델 공개 ([arXiv](https://arxiv.org/abs/2609.37675))
   - 핵심: 32K 어휘 아미노산 n-gram 클러스터 기반 토크나이징, 203M 파라미터 트랜스포머, 폴드 유사도 검색 성능 향상
