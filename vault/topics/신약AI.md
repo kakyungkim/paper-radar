@@ -2,9 +2,9 @@
 type: moc
 tags: [신약AI]
 ---
-## 2026-W42 핵심 흐름
-W42 신약AI는 AlphaFold 신뢰도 점수의 계면 품질 보정이 핵심이다. pLDDT·iPTM 같은 기존 신뢰도 지표가 단백질 복합체 계면 품질을 체계적으로 오평가함을 규명하고 보정 방법을 제시한 논문(arXiv:2610.17108)은 AlphaFold2/3가 신약 타깃-리간드 계면 예측 파이프라인의 사실상 표준이 된 상황에서 실용적 인프라 수준의 기여다. 코드·데이터 공개 미확인(프리프린트). 와이드의 조건부 플로우 모델(arXiv:2610.20288)은 미관측 약물-표적 상호작용 예측 맥락에서 재등장해 신약 발굴 축 승격 후보로 주목된다. W41의 인과 추론 타깃 발굴에서 W42는 구조 예측 도구의 신뢰도 보정이라는 실용 인프라 방향으로 이동한다.
-[[papers-2026-W42]] | [[2026-W42]]
+## 2026-W43 핵심 흐름
+W43 신약AI의 핵심 흐름은 SBDD(구조 기반 신약 설계) 생성 모델의 평가 기준 재정의와 단백질-리간드 도킹 범위 확장이다. SelectBench(arXiv:2610.24124)는 9개 SBDD 생성 모델을 선택성(selectivity) 기준으로 평가한 최초의 체계적 벤치마크로, 기존 결합 친화도 최적화 중심 평가 패러다임의 맹점을 드러낸다. ProtGlycanDock(arXiv:2610.26009)은 단백질-당 복합체 도킹 특화 데이터셋·벤치마크·모델을 함께 제시하며, 단백질-소분자 도킹 중심이던 신약AI 파이프라인의 당생물학 확장을 의미한다. Multi-Objective Protein Optimization(arXiv:2610.28943)은 다목적(친화도·안정성·특이성 등 복수 목표) 단백질 최적화를 모듈형 확산 조향으로 접근한다. W42의 구조 예측 신뢰도 보정에서 W43은 평가 기준 재정의와 도킹 범위 확장으로 이동한다.
+[[papers-2026-W43]] | [[2026-W43]]
 
 ---
 # 🗂 신약AI — 주제 지도(MOC)
@@ -15,6 +15,17 @@ W42 신약AI는 AlphaFold 신뢰도 점수의 계면 품질 보정이 핵심이�
 (이전) W35 기준 mRNA 치료제 제조 병목 해결(Zheng 외, IVT RNA 수율 예측 r=0.94)과 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)가 핵심이었다.
 
 ## 타임라인
+### 2026-W43 (2026-10-19~2026-10-25)
+- [[selectbench-sbdd-2026-W43]] — On the Selectivity of Generative Models in SBDD: SBDD 생성 모델 선택성(off-target 회피) 최초 체계적 평가, 9개 모델 전수 기준 미충족 ([arXiv](https://arxiv.org/abs/2610.24124))
+  - 핵심: 결합 친화도 최적화만으로는 선택성 문제를 해결하지 못함을 데이터로 제시; 신약 설계 평가 기준 확장 논거
+  - 검증: in silico; peer-reviewed; 코드 공개 미확인
+- [[protglycandock-2026-W43]] — ProtGlycanDock: 단백질-당 복합체 도킹 맞춤 데이터셋·벤치마크·모델 일괄 제시 ([arXiv](https://arxiv.org/abs/2610.26009))
+  - 핵심: 기존 소분자 도킹 도구의 당 복합체 처리 한계를 특화 학습으로 극복; 당생물학·항체 설계 연구 인프라 기여
+  - 검증: in silico; peer-reviewed; 코드 공개 미확인
+- [[multiobj-protein-diffusion-2026-W43]] — Multi-Objective Protein Optimization via Modular Diffusion Steering: 복수 목표(친화도·안정성·특이성) 동시 최적화를 모듈형 확산 조향으로 구현 ([arXiv](https://arxiv.org/abs/2610.28943))
+  - 핵심: 단일 목표 최적화의 실용성 한계를 다목적 접근으로 공략; 치료 단백질 엔지니어링 파이프라인 적용 가능성
+  - 검증: 원문 미확인 (초록 재확인 권장); preprint; 코드 공개 미확인
+
 ### 2026-W42 (2026-10-12~2026-10-18)
 - 2026-W42 | [[alphafold-interface-calib-2026-W42]] Calibrating AlphaFold confidence scores for interface quality — AlphaFold pLDDT·iPTM의 계면 품질 체계적 편향 보정 ([arXiv](https://arxiv.org/abs/2610.17108))
   - 핵심: 기존 신뢰도 점수가 복합체 계면 품질을 과대·과소 평가하는 패턴 규명; 보정 레이어 제안; 신약 타깃-리간드 도킹 파이프라인의 실용 인프라 기여
