@@ -2,9 +2,9 @@
 type: moc
 tags: [신약AI]
 ---
-## 2026-W43 핵심 흐름
-W43 신약AI의 핵심 흐름은 SBDD(구조 기반 신약 설계) 생성 모델의 평가 기준 재정의와 단백질-리간드 도킹 범위 확장이다. SelectBench(arXiv:2610.24124)는 9개 SBDD 생성 모델을 선택성(selectivity) 기준으로 평가한 최초의 체계적 벤치마크로, 기존 결합 친화도 최적화 중심 평가 패러다임의 맹점을 드러낸다. ProtGlycanDock(arXiv:2610.26009)은 단백질-당 복합체 도킹 특화 데이터셋·벤치마크·모델을 함께 제시하며, 단백질-소분자 도킹 중심이던 신약AI 파이프라인의 당생물학 확장을 의미한다. Multi-Objective Protein Optimization(arXiv:2610.28943)은 다목적(친화도·안정성·특이성 등 복수 목표) 단백질 최적화를 모듈형 확산 조향으로 접근한다. W42의 구조 예측 신뢰도 보정에서 W43은 평가 기준 재정의와 도킹 범위 확장으로 이동한다.
-[[papers-2026-W43]] | [[2026-W43]]
+## 2026-W44 핵심 흐름
+W44 신약AI는 SBDD(구조 기반 신약 설계) 생성 모델에 기계 학습 원자간 포텐셜(machine-learned interatomic potential, MLIP)을 에너지 유도 신호로 통합하는 방향이 핵심이다. MLIPDiff(arXiv:2610.33315)는 MLIP의 에너지 기울기를 확산 모델의 디노이징 단계에 직접 주입해 물리화학적으로 타당한 분자 구조 생성을 유도한다. 물리 기반 평가 없이 결합 친화도 최적화에만 의존하던 기존 SBDD 흐름의 한계를 보완하며, W43 SelectBench의 평가 기준 재정의 논의와 맥락이 이어진다. preprint 단계, 원문 초록 미확인.
+[[papers-2026-W44]] | [[2026-W44]]
 
 ---
 # 🗂 신약AI — 주제 지도(MOC)
@@ -15,6 +15,11 @@ W43 신약AI의 핵심 흐름은 SBDD(구조 기반 신약 설계) 생성 모델
 (이전) W35 기준 mRNA 치료제 제조 병목 해결(Zheng 외, IVT RNA 수율 예측 r=0.94)과 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)가 핵심이었다.
 
 ## 타임라인
+### 2026-W44 (2026-10-26~2026-11-01)
+- [[mlipdiff-sbdd-2026-W44]] — MLIPDiff: Guiding Denoising Diffusion Models for SBDD via Machine-Learned Interatomic Potentials: MLIP 에너지 기울기를 확산 디노이징에 주입해 물리적으로 타당한 분자 생성 유도 ([arXiv](https://arxiv.org/abs/2610.33315))
+  - 핵심: 결합 친화도 최적화 이상의 물리화학적 타당성을 에너지 신호로 보강; W43 SelectBench 평가 기준 확장 논의 연장선
+  - 검증: in silico (초록 미확인); preprint; 코드 공개 미확인
+
 ### 2026-W43 (2026-10-19~2026-10-25)
 - [[selectbench-sbdd-2026-W43]] — On the Selectivity of Generative Models in SBDD: SBDD 생성 모델 선택성(off-target 회피) 최초 체계적 평가, 9개 모델 전수 기준 미충족 ([arXiv](https://arxiv.org/abs/2610.24124))
   - 핵심: 결합 친화도 최적화만으로는 선택성 문제를 해결하지 못함을 데이터로 제시; 신약 설계 평가 기준 확장 논거

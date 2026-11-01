@@ -5,31 +5,31 @@ type: meta
 
 paper-scout가 시작 시 읽어 이미 다룬 논문(DOI/arXiv ID)을 다시 올리지 않는다. knowledge-curator가 매주 갱신하며 최근 3주치만 유지한다.
 
-## 2026-W40
+## 2026-W44
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| dti-cross-attention-2026-W40 | Drug-Target Interaction Prediction via Hierarchical Sequential Cross-Attention over Chemical and Protein Language Models | arXiv:2609.34921 | preprint |
-| lemon-zest-2026-W40 | LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling | arXiv:2609.37675 | preprint |
-| struct-rl-directed-evo-2026-W40 | Structure-aware Reinforcement Learning for Protein Directed Evolution | arXiv:2609.39048 | preprint |
-| mospr-2026-W40 | MoSPR: Histology-to-Gene Expression Prediction with Morpho-Spatial Macrostates and Low-Rank Molecular Programs | arXiv:2609.34280 | preprint |
-| ehrflow-2026-W40 | Learning Continuous Patient Trajectories from Electronic Health Records | arXiv:2609.36144 | preprint |
+| clinical-genomic-agent-2026-W44 | Advancing Clinical Genomic Analysis with a Skill-Centred Agent | arXiv:2610.40556 | preprint |
+| helics-synthetic-genome-2026-W44 | HELICS: Biobank-scale Conditional Synthetic Genome Generation via Latent Flow Matching | arXiv:2610.36361 | peer-reviewed |
+| trion1-protein-diffusion-lm-2026-W44 | Trion-1: Unifying Language, Protein Sequence, and Structure with Diffusion Language Models | arXiv:2610.31215 | preprint |
+| longitudinal-ai-cancer-ae-2026-W44 | Longitudinal AI Models Predict Cancer Adverse Events | DOI:10.64898/2026.10.22.26364879 | preprint |
+| mlipdiff-sbdd-2026-W44 | MLIPDiff: Guiding Denoising Diffusion Models for Structure-Based Drug Design via Machine-Learned Interatomic Potentials | arXiv:2610.33315 | preprint |
 
-## 2026-W36
+## 2026-W43
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| schuhmacher-2026-W36 | Creating bottom-up RNA transfer vehicles from synthetic protein assemblies | DOI:10.1038/s41586-026-10952-3 | peer-reviewed |
-| zhang-prospector-2026-W36 | Operationalizing open-ended biological discovery across single-cell representations | arXiv:2609.00681 | preprint |
-| zhou-subcell-2026-W36 | Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information | arXiv:2609.02344 | preprint |
-| hao-probematch-2026-W36 | ProbeMatchDTI: Probe-Driven Multi-Scale Biochemical Pattern Matching for Drug-Target Interaction Prediction | arXiv:2609.02549 | preprint |
-| saezrodriguez-benchmarking-2026-W36 | Benchmarking biomedical foundation models | DOI:10.1038/s41592-026-03182-y | peer-reviewed |
+| recamplify-2026-W43 | recAMPLIFY: Large-Scale Pretraining of Recursive Protein Language Models | arXiv:2610.26747 | preprint |
+| protglycandock-2026-W43 | ProtGlycanDock: Towards Accurate Protein-Glycan Docking with Tailored Dataset, Benchmark and Model | arXiv:2610.26009 | preprint |
+| selectbench-sbdd-2026-W43 | On the Selectivity of Generative Models in Structure-Based Drug Design | arXiv:2610.24124 | preprint |
+| lgbench-2026-W43 | LG-Bench: A Graph-Structured Evaluation Benchmark for Life Science | arXiv:2610.26787 | preprint |
+| multiobj-protein-diffusion-2026-W43 | Multi-Objective Protein Optimization via Modular Diffusion Steering | arXiv:2610.28943 | preprint |
 
-## 2026-W34
+## 2026-W42
 | record_id | 제목 | DOI / arXiv ID | 상태 |
 |---|---|---|---|
-| liu-2026-W34 | Leveraging generative hallucination and biophysics-informed modeling for unified biomolecular sequence-structure co-design | arXiv:2608.17381 | preprint |
-| horvath-2026-W34 | Putting epigenetic aging clocks on trial | DOI:10.1038/s41591-026-04524-1 | peer-reviewed |
-| emitgcl-2026-W34 | Deep-learning-enabled multi-omics analyses for prediction of future metastasis in cancer | DOI:10.1038/s41467-026-76277-x | peer-reviewed |
-| javidi-2026-W34 | Quantum Kernel Estimation for the Discovery of Early Lung Cancer Detection | arXiv:2608.19304 | preprint |
-| wang-2026-W34 | EpiBench: Can LLMs Understand Epitopes for Antibody Drug Discovery? | arXiv:2608.06022 | preprint |
+| cloneot-2026-W42 | CloneOT: predicting clone-specific perturbation responses with lineage-supervised neural inverse optimal transport | arXiv:2610.16093 | preprint |
+| alphafold-interface-calib-2026-W42 | Calibrating AlphaFold confidence scores for interface quality | arXiv:2610.17108 | preprint |
+| frozen-protein-bench-2026-W42 | A Diagnostic Benchmark of Frozen Protein Encoders | arXiv:2610.18879 | preprint |
+| virtual-perturbation-aging-2026-W42 | Deep learning-based virtual perturbation reveals increasing heterogeneity of gene regulatory responses with aging | arXiv:2610.19029 | preprint |
+| omicsbench-2026-W42 | OmicsBench: a long-horizon multi-turn benchmark of AI agents on research-study-scale bioinformatics | arXiv:2610.21074 | preprint |
 
 

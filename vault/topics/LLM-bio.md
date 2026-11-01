@@ -2,9 +2,9 @@
 type: moc
 tags: [LLM-bio]
 ---
-## 2026-W43 핵심 흐름
-W43 LLM-bio는 생명과학 LLM 평가 인프라의 범위 확장이 주제다. recAMPLIFY(arXiv:2610.26747)는 재귀적 단백질 언어 모델 대규모 사전학습으로 단백질 파운데이션 모델 아키텍처 실험을 확장하며, PLM 표현의 질적 개선 방향을 제시한다. LG-Bench(arXiv:2610.26787)는 생명과학 전반을 포괄하는 그래프 구조 평가 벤치마크로, 기존 단일 모달·단일 태스크 벤치마크의 단편성을 극복하려는 시도다. NeurIPS 2026 아카이브 공개 시기와 겹쳐 동종 벤치마크 논문이 다수 등장하는 흐름 속에 있다. W42의 오믹스 에이전트·동결 인코더 진단에서 W43은 PLM 아키텍처 실험과 생명과학 그래프 평가 벤치마크로 이동한다.
-[[papers-2026-W43]] | [[2026-W43]]
+## 2026-W44 핵심 흐름
+W44 LLM-bio는 두 방향이 두드러진다. 임상 유전체 AI 에이전트(arXiv:2610.40556)는 스킬 중심 에이전트 아키텍처로 임상 유전체 분석 워크플로우를 자동화하며, 전향 N=96 사례에서 기존 파이프라인 대비 높은 성능을 보인다. Trion-1(arXiv:2610.31215)은 자연어·단백질 서열·단백질 구조를 단일 확산 언어 모델(diffusion language model)로 통합하는 아키텍처로, 세 모달리티의 공동 생성을 가능하게 한다는 점에서 단백질 설계와 생물학적 언어 이해를 연결하는 시도다(수치 62.37% 귀속 불분명, 검토 필요). W43의 PLM 아키텍처 실험과 그래프 평가 벤치마크에서 W44는 임상 에이전트 자동화와 다중 모달리티 통합 확산 LM으로 이동한다.
+[[papers-2026-W44]] | [[2026-W44]]
 
 ---
 # 🗂 LLM-bio — 주제 지도(MOC)
@@ -15,6 +15,14 @@ W43 LLM-bio는 생명과학 LLM 평가 인프라의 범위 확장이 주제다. 
 (이전) W35 기준 Mol-JEPA 분자 JEPA 아키텍처(Boehringer Ingelheim 공동)와 GITIII-scale 팬-암 공간 전사체 파운데이션 모델이 핵심이었다.
 
 ## 타임라인
+### 2026-W44 (2026-10-26~2026-11-01)
+- [[clinical-genomic-agent-2026-W44]] — Advancing Clinical Genomic Analysis with a Skill-Centred Agent: 스킬 중심 에이전트 아키텍처로 임상 유전체 분석 파이프라인 자동화, 전향 N=96 검증 ([arXiv](https://arxiv.org/abs/2610.40556))
+  - 핵심: 스킬 모듈 조합 에이전트; 임상 유전체 LLM 에이전트의 전향 검증이 기존 in silico 위주 평가를 넘어섰다는 점에서 주목
+  - 검증: 전향 N=96; preprint — 참조: [[임상ML#2026-W44]]
+- [[trion1-protein-diffusion-lm-2026-W44]] — Trion-1: Unifying Language, Protein Sequence, and Structure with Diffusion Language Models: 자연어·단백질 서열·단백질 구조를 단일 확산 언어 모델로 통합, 세 모달리티 공동 생성 ([arXiv](https://arxiv.org/abs/2610.31215))
+  - 핵심: 언어-서열-구조 공동 학습이 각 모달리티 전용 모델 대비 실질 성능 향상을 내는지 검증 필요; 수치 62.37% 귀속 불분명 (검토필요)
+  - 검증: in silico (초록 미확인); preprint; 코드 공개 미확인
+
 ### 2026-W43 (2026-10-19~2026-10-25)
 - [[recamplify-2026-W43]] — recAMPLIFY: 재귀적 단백질 언어 모델 대규모 사전학습, PLM 아키텍처 대안 탐색 ([arXiv](https://arxiv.org/abs/2610.26747))
   - 핵심: 재귀 구조로 장거리 서열 의존성 통합; ESM/ProtTrans 계열을 보완하는 사전학습 패러다임
