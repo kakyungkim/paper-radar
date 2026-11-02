@@ -15,6 +15,13 @@ tools: WebSearch, WebFetch, Read, Write, Bash
 > `status` 값: `preprint`(초기) / `published`(동료심사 후 출판 확인 — knowledge-curator가 갱신)
 > 첫 줄은 `#`으로 시작하는 주석이므로 건너뛴다.
 
+## 0.5순위 — Actions 후보 파일
+**중복 확인 다음, 웹 검색 전에 `vault/raw/candidates-YYYY-Www.md`(같은 이름의 `.json`)를 읽어라.** 클라우드 세션은 arXiv·bioRxiv·medRxiv에 접근할 수 없어 초록을 확인하지 못했다(W42~W44). 이를 GitHub Actions가 토요일 22:00 UTC에 공식 API로 대신 수집해 저장소에 올려 둔다.
+- 이 파일에서 핵심·와이드 논문을 고른다. 파일 안의 초록은 API 원문이므로 **검증된 초록으로 취급**한다(출처=API 기록).
+- WebSearch·WebFetch는 사회적 신호(HF Daily Papers, X, 언론)와 파일에 없는 항목(주요 저널 신착 등)을 확인할 때만 쓴다.
+- 파일의 점수는 키워드 기반 1차 정렬일 뿐이다. 포커스 범위 적합성은 직접 판단한다.
+- 파일이 없으면 raw 출력 맨 위에 "Actions 후보 파일 없음"이라고 적고 아래 기존 방식으로 수집한다. 이때 접근하지 못해 초록을 확인하지 못한 논문은 "초록 미확인"으로 표시한다.
+
 ## 책임
 1. **핵심 축 수집 (5편 안팎)** — CLAUDE.md의 포커스 범위(바이오인포·유전체·임상ML·신약개발AI)에서 지난 7일 신규/화제 논문을 고른다.
    - 소스: bioRxiv·medRxiv(`https://www.biorxiv.org`, `https://www.medrxiv.org` 최신/분야별), arXiv(q-bio, cs.LG·cs.AI의 생물학 적용), PubMed(`https://pubmed.ncbi.nlm.nih.gov`) 신규, 주요 저널(Nature·Nature Methods·Cell·NEJM·Nature Medicine 등) 신착, **HuggingFace Daily Papers**(`https://huggingface.co/papers` — 생물학·신약 관련 상위 논문).
