@@ -400,6 +400,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <title>paper-radar — {period}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>{css}</style>
+<script data-goatcounter="https://kakyungkim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <div class="max-w-3xl mx-auto px-4 py-10">
