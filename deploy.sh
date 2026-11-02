@@ -24,6 +24,25 @@ IDX="$BLOG/paper-radar/index.html"
 [ -f "$SRC" ] || { echo "❌ 렌더 파일이 없습니다: $SRC"; exit 1; }
 [ -d "$BLOG/paper-radar" ] || { echo "❌ 블로그 paper-radar 폴더 없음: $BLOG/paper-radar"; exit 1; }
 
+# ── 발행 전 검증 게이트 (2026-W27 블로그 한글 깨짐 사고 재발 방지) ──
+# 배포할 HTML이 소스에서 즉석 재렌더한 결과와 바이트 동일한지 대조한다.
+# 손편집·깨진 중간본·오래된 렌더본이 그대로 나가는 것을 막는다.
+DIGEST="$PAPER/vault/digest/$WEEK.md"
+if [ -f "$DIGEST" ]; then
+  python3 "$PAPER/scripts/render_html.py" "$WEEK" --out-suffix .verify >/dev/null 2>&1 || {
+    echo "❌ 검증용 재렌더 실패 — 배포 중단"; exit 1; }
+  VERIFY="$PAPER/vault/html/$WEEK.verify.html"
+  if ! diff -q "$SRC" "$VERIFY" >/dev/null; then
+    echo "❌ 배포 대상 HTML이 소스 재렌더본과 다릅니다 — 손편집/깨짐/구본 의심. 배포 중단."
+    echo "   확인:  diff \"$SRC\" \"$VERIFY\""
+    exit 1
+  fi
+  rm -f "$VERIFY" "$PAPER/vault/push/$WEEK.verify.md" "$PAPER/vault/push/$WEEK.verify-deepdive.md" 2>/dev/null || true
+  echo "✅ 검증: 배포본 == 소스 재렌더본 (깨짐·손편집 없음)"
+else
+  echo "⚠️  소스 digest 없음($DIGEST) — 재렌더 대조 건너뜀. SRC를 그대로 신뢰함."
+fi
+
 cp "$SRC" "$DST"
 echo "✅ 복사: paper-radar/$WEEK.html"
 
@@ -37,16 +56,32 @@ fi
 
 cd "$BLOG"
 git add "paper-radar/$WEEK.html" "paper-radar/index.html"
-if git diff --cached --quiet; then echo "변경 없음 — 종료"; exit 0; fi
-git commit -q -m "paper-radar: $WEEK 발행"
-echo "✅ 커밋 완료"
+if git diff --cached --quiet; then
+  echo "ℹ️  로컬 변경 없음 — 원격 반영 여부만 확인"   # 앞선 실행이 커밋만 하고 push를 못 했을 수 있다
+else
+  git commit -q -m "paper-radar: $WEEK 발행"
+  echo "✅ 커밋 완료"
+fi
+
+# HEAD:main 으로 민다. `git push origin main`은 detached HEAD(클라우드 세션의 기본 상태)에서
+# 새 커밋이 아닌 옛 main을 밀어 "Everything up-to-date"로 성공 종료했다(2026-W40~W42, W44 블로그 누락).
+# push 뒤에는 원격 main에 이 주차 파일이 로컬과 같은 내용으로 있는지 확인하고, 없으면 실패로 끝낸다.
+publish() {
+  git push origin HEAD:main
+  git fetch -q origin main
+  if [ "$(git rev-parse "FETCH_HEAD:paper-radar/$WEEK.html" 2>/dev/null)" != "$(git rev-parse "HEAD:paper-radar/$WEEK.html")" ]; then
+    echo "❌ push 뒤 원격 main에 paper-radar/$WEEK.html 이 없거나 다릅니다. 공개되지 않았습니다." >&2
+    exit 1
+  fi
+  echo "🚀 공개 완료 — 원격 main 반영 확인 (페이지는 1~2분 뒤 라이브)"
+}
 
 if [ "$CONFIRM" = "1" ]; then
   read -r -p "지금 push 해서 공개할까요? [y/N] " yn
   case "$yn" in
-    [yY]*) git push origin main && echo "🚀 공개 완료 (1~2분 뒤 라이브)";;
-    *)     echo "⏸  push 보류 — 나중에:  (cd \"$BLOG\" && git push)";;
+    [yY]*) publish;;
+    *)     echo "⏸  push 보류 — 나중에:  (cd \"$BLOG\" && git push origin HEAD:main)";;
   esac
 else
-  git push origin main && echo "🚀 공개 완료 (1~2분 뒤 라이브)"
+  publish
 fi
