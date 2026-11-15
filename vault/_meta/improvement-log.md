@@ -3,6 +3,18 @@ type: meta
 ---
 # 개선 기록 (improvement-log)
 
+## 2026-W45 (2026-11-15)
+
+### 이번 주 실행 메모
+- 수집: candidates-2026-W45.md API 초록 60건 전량 직접 접근 가능. W45 파이프라인을 W46 주차에 처리(W46 candidates 미생성 상태였음).
+- 핵심 논문: C1 MUTUAL(단일세포 멀티모달 FM 브릿지), C2 Evo2 맹점(DNA FM 임상 경고), C3 El Agente Fármaco(LLM 신약 오케스트레이터), C4 LLM 허약 지수(음성 결과 임상), C5 PrismSNV+Ligo-Seq(세포 맥락 변이).
+- 방법: C5(PrismSNV)가 가장 패러다임 도전적. C4가 음성 결과를 명확히 보고한 점에서 방법론적으로도 중요.
+- 임상: C2(Evo2)와 C4(LLM frailty)가 직접 임상 경고. C5는 중장기 VUS 해석 체계에 함의.
+- 산업: 이번 주 공통 테마 — "AI/FM 과대 주장 대 현실적 한계의 명확화". C2·C4가 균형추.
+- 와이드: W2(Reasoning Paradox)는 자율 바이오인포 에이전트 설계에 직접 적용 가능한 통찰 — 모니터링 가치.
+- 수치 이슈: C5 Key Point에서 ClinVar 등재 비율 귀속("3암종" vs "6암종" 맥락 분리) 수정 완료.
+- 렌더: 정상 완료. top5=5, deepdive=2, wide=3, threads=5, sources=8.
+
 ## 2026-W44 (2026-11-01)
 
 ### 이번 주 실행 메모
